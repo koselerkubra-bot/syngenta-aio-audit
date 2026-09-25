@@ -1,0 +1,72 @@
+[
+  {
+    "date": "2026-09-25",
+    "total_pages": 294,
+    "pages_by_type": {
+      "homepage": 1,
+      "other": 43,
+      "product": 129,
+      "article": 6,
+      "service": 115
+    },
+    "js_content_gap": {
+      "count": 283,
+      "pct": 96.3
+    },
+    "missing_h1": {
+      "count": 11,
+      "pct": 3.7
+    },
+    "multiple_h1": {
+      "count": 3,
+      "pct": 1.0
+    },
+    "meta_title_missing": {
+      "count": 5,
+      "pct": 1.7
+    },
+    "meta_title_too_long": {
+      "count": 6,
+      "pct": 2.0
+    },
+    "meta_description_missing": {
+      "count": 32,
+      "pct": 10.9
+    },
+    "meta_description_out_of_range": {
+      "count": 218,
+      "pct": 74.1
+    },
+    "faqpage_schema_present": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "any_schema_present": {
+      "count": 289,
+      "pct": 98.3
+    },
+    "avg_h2_question_phrasing_pct": 1.3,
+    "freshness_signal_present": {
+      "count": 289,
+      "pct": 98.3
+    },
+    "image_alt_totals": {
+      "total_images": 9995,
+      "empty_alt": 1887,
+      "filename_like_alt": 816,
+      "missing_or_broken_src": 182
+    },
+    "ai_bot_access": {
+      "robots_txt_url": "https://www.syngenta.ca/robots.txt",
+      "reachable": true,
+      "bots": {
+        "GPTBot": "not_mentioned",
+        "Anthropic-AI": "not_mentioned",
+        "ClaudeBot": "not_mentioned",
+        "PerplexityBot": "not_mentioned",
+        "Google-Extended": "not_mentioned",
+        "CCBot": "not_mentioned"
+      }
+    }
+  }
+]
