@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AIO Status: Tracked Sites</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F7F2; --bg-raised: #FFFFFF; --ink: #1B241D; --ink-soft: #4A544C;
+    --line: #DCDFD3; --accent: #2F5233; --accent-soft: #E4EBDF;
+    --bad: #B23A1A; --bad-soft: #F7E4DC; --good: #3F7A48; --good-soft: #E1EFE1;
+    padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #14170F; --bg-raised: #1B2016; --ink: #ECEEE6; --ink-soft: #ABB4A4;
+      --line: #333A2B; --accent: #8FBF8A; --accent-soft: #232B1F;
+      --bad: #E6825F; --bad-soft: #2E1D16; --good: #86C48B; --good-soft: #1C2A1D;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14170F; --bg-raised: #1B2016; --ink: #ECEEE6; --ink-soft: #ABB4A4;
+    --line: #333A2B; --accent: #8FBF8A; --accent-soft: #232B1F;
+    --bad: #E6825F; --bad-soft: #2E1D16; --good: #86C48B; --good-soft: #1C2A1D;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Inter", system-ui, sans-serif; font-size: 15.5px; line-height: 1.55; }
+  h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; margin: 0; }
+  a { color: var(--accent); text-decoration: none; }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 48px 28px 90px; }
+  .mark { font-family: "Fraunces", serif; font-size: 15px; }
+  .mark span { color: var(--accent); }
+  h1.title { font-size: 32px; margin-top: 18px; }
+  .deck { max-width: 560px; color: var(--ink-soft); margin-top: 12px; }
+  .meta { font-size: 12.5px; color: var(--ink-soft); margin-top: 20px; }
+
+  .site-list { margin-top: 30px; display: grid; gap: 14px; }
+  .site-card {
+    display: block; background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px 22px; transition: border-color 0.15s ease;
+  }
+  .site-card:hover { border-color: var(--accent); }
+  .site-card .row1 { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
+  .site-card h2 { font-size: 19px; color: var(--ink); }
+  .site-card .domain { font-size: 12.5px; color: var(--ink-soft); }
+  .site-card .stats { display: flex; gap: 22px; margin-top: 14px; flex-wrap: wrap; }
+  .site-card .stat { font-size: 12.5px; color: var(--ink-soft); }
+  .site-card .stat b { display: block; font-family: "Fraunces", serif; font-size: 20px; color: var(--ink); font-weight: 600; }
+  .site-card .stat b.bad { color: var(--bad); }
+  .site-card .scanned { font-size: 11.5px; color: var(--ink-soft); margin-top: 12px; }
+
+  .empty { margin-top: 40px; padding: 26px; border: 1px dashed var(--line); border-radius: 12px; color: var(--ink-soft); font-size: 14px; }
+
+  footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-soft); max-width: 620px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="mark">AIO Status <span>&middot; all tracked sites</span></div>
+  <h1 class="title">Technical AIO status across every tracked site</h1>
+  <p class="deck">One dashboard per site, all built from the same on-page checklist. Add a site from the repository's Actions tab, no code changes needed.</p>
+  <div class="meta">Last run: {{ generated_at }}</div>
+
+  {% if sites %}
+  <div class="site-list">
+    {% for site in sites %}
+    <a class="site-card" href="{{ site.slug }}/">
+      <div class="row1">
+        <h2>{{ site.name }}</h2>
+        <span class="domain">{{ site.domain.replace('https://', '').replace('http://', '') }}</span>
+      </div>
+      <div class="stats">
+        <div class="stat"><b>{{ site.summary.total_pages }}</b>pages scanned</div>
+        <div class="stat"><b class="{{ 'bad' if site.summary.js_content_gap.pct > 0 else '' }}">{{ site.summary.js_content_gap.pct }}%</b>JS content gap</div>
+        <div class="stat"><b class="{{ 'bad' if site.summary.faqpage_schema_present.pct < 50 else '' }}">{{ site.summary.faqpage_schema_present.pct }}%</b>FAQ schema present</div>
+      </div>
+      <div class="scanned">Last scanned {{ site.generated_at }}</div>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty">No sites tracked yet. Add one from the repository's Actions tab: run "Weekly AIO Scan" manually with a URL in the "add_url" field.</div>
+  {% endif %}
+
+  <footer>
+    <p>Each site's dashboard reports current-state facts only, no recommendations. Generated automatically by a scheduled script, no AI model runs at scan time.</p>
+  </footer>
+</div>
+</body>
+</html>

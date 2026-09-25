@@ -1,0 +1,57 @@
+# Shared scan settings, applied to every site listed in config/sites.yaml.
+# The site list itself (domain, sitemap) lives in that separate file so
+# adding a new site never means touching this one.
+
+user_agent: "AIOAuditBot/1.0 (+internal tool, contact: gdm-digital@syngenta.com)"
+
+request_timeout: 20        # seconds, for plain HTTP fetches
+render_timeout_ms: 15000   # milliseconds, for the headless-browser fetch
+
+# Skip discovered URLs that end in these extensions (PDFs, images, etc.).
+exclude_patterns:
+  - ".pdf"
+  - ".jpg"
+  - ".jpeg"
+  - ".png"
+  - ".webp"
+  - ".zip"
+  - ".doc"
+  - ".docx"
+
+# 0 = scan every URL the sitemap returns. Set a number while testing
+# so a trial run finishes in a minute instead of an hour.
+max_pages: 0
+
+# AI crawlers to check for in robots.txt.
+ai_bots_to_check:
+  - GPTBot
+  - Anthropic-AI
+  - ClaudeBot
+  - PerplexityBot
+  - Google-Extended
+  - CCBot
+
+# A page is flagged as JavaScript-dependent when the rendered version
+# has at least this many more words than the raw HTML AND is at least
+# this many times larger. Both conditions must hold, so a short page
+# with naturally few words doesn't trigger a false positive.
+js_gap_word_threshold_ratio: 3.0
+js_gap_min_word_diff: 80
+
+# On-page thresholds (mirrors the syngenta-seo-aeo-optimizer skill's
+# aeo-principles.md).
+meta_title_max_len: 60
+meta_desc_min_len: 120
+meta_desc_max_len: 155
+
+# Output paths. "{slug}" is filled in per site (see config/sites.yaml),
+# so each tracked site gets its own dashboard and its own data folder
+# without colliding with any other site's.
+latest_pages_file: "data/{slug}/latest_pages.json"
+history_dir: "data/{slug}/history"
+timeseries_file: "data/{slug}/summary_timeseries.json"
+dashboard_output: "docs/{slug}/index.html"
+
+# The top-level page that lists every tracked site and links to each
+# one's dashboard. This is what GitHub Pages serves at the repo root.
+hub_output: "docs/index.html"

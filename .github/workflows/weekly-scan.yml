@@ -1,0 +1,59 @@
+name: Weekly AIO Scan
+
+on:
+  schedule:
+    # Every Monday at 06:00 UTC. Edit this line to change the cadence.
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+    inputs:
+      add_url:
+        description: "Optional: paste any URL on a new site to start tracking it (e.g. https://www.syngenta.com.mx/). Leave empty to just re-run the regular scan of every tracked site."
+        required: false
+        default: ""
+      site_name:
+        description: "Optional: display name for the new site (only used together with add_url)."
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Run scan
+        env:
+          ADD_URL: ${{ github.event.inputs.add_url }}
+          SITE_NAME: ${{ github.event.inputs.site_name }}
+        run: |
+          if [ -n "$ADD_URL" ]; then
+            if [ -n "$SITE_NAME" ]; then
+              python scanner.py --add-url "$ADD_URL" --name "$SITE_NAME"
+            else
+              python scanner.py --add-url "$ADD_URL"
+            fi
+          else
+            python scanner.py --all
+          fi
+
+      - name: Commit updated dashboards and data
+        run: |
+          git config user.name "aio-audit-bot"
+          git config user.email "aio-audit-bot@users.noreply.github.com"
+          git add data docs config/sites.yaml
+          git diff --cached --quiet || git commit -m "AIO scan: $(date -u +%Y-%m-%d)"
+          git push

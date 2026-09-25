@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AIO Status: {{ domain }}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F7F2;
+    --bg-raised: #FFFFFF;
+    --ink: #1B241D;
+    --ink-soft: #4A544C;
+    --line: #DCDFD3;
+    --accent: #2F5233;
+    --accent-soft: #E4EBDF;
+    --bad: #B23A1A;
+    --bad-soft: #F7E4DC;
+    --warn: #B5810F;
+    --warn-soft: #F6EAD1;
+    --good: #3F7A48;
+    --good-soft: #E1EFE1;
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #14170F; --bg-raised: #1B2016; --ink: #ECEEE6; --ink-soft: #ABB4A4;
+      --line: #333A2B; --accent: #8FBF8A; --accent-soft: #232B1F;
+      --bad: #E6825F; --bad-soft: #2E1D16; --warn: #E0B655; --warn-soft: #2C2413;
+      --good: #86C48B; --good-soft: #1C2A1D;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14170F; --bg-raised: #1B2016; --ink: #ECEEE6; --ink-soft: #ABB4A4;
+    --line: #333A2B; --accent: #8FBF8A; --accent-soft: #232B1F;
+    --bad: #E6825F; --bad-soft: #2E1D16; --warn: #E0B655; --warn-soft: #2C2413;
+    --good: #86C48B; --good-soft: #1C2A1D;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 20px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Inter", system-ui, sans-serif; font-size: 15.5px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; color: var(--ink); margin: 0; line-height: 1.15; }
+  a { color: var(--accent); }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 44px 28px 90px; }
+
+  .top-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 14px; margin-bottom: 30px;
+  }
+  .top-row .mark { font-family: "Fraunces", serif; font-size: 15px; }
+  .top-row .mark span { color: var(--accent); }
+  .top-row .meta { font-size: 12.5px; color: var(--ink-soft); text-align: right; }
+
+  h1.title { font-size: 34px; max-width: 640px; }
+  .deck { max-width: 560px; font-size: 16px; color: var(--ink-soft); margin-top: 12px; }
+
+  /* Scorecard */
+  .scorecard {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+    background: var(--line); border: 1px solid var(--line); border-radius: 12px;
+    overflow: hidden; margin: 30px 0 0;
+  }
+  .stat { background: var(--bg-raised); padding: 20px 18px; }
+  .stat .num { font-family: "Fraunces", serif; font-size: 30px; font-weight: 600; color: var(--accent); line-height: 1; }
+  .stat .num.bad { color: var(--bad); }
+  .stat .label { font-size: 12px; color: var(--ink-soft); margin-top: 8px; }
+  @media (max-width: 720px) { .scorecard { grid-template-columns: repeat(2, 1fr); } }
+
+  section { margin-top: 56px; }
+  .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  h2.h-section { font-size: 22px; }
+  .section-note { font-size: 13px; color: var(--ink-soft); }
+
+  /* Trend cards */
+  .trend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; }
+  @media (max-width: 780px) { .trend-grid { grid-template-columns: 1fr; } }
+  .trend-card { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .trend-card .t-label { font-size: 12.5px; color: var(--ink-soft); }
+  .trend-card .t-value { font-family: "Fraunces", serif; font-size: 26px; margin-top: 4px; }
+  .trend-card .t-delta { font-size: 12px; margin-top: 2px; }
+  .trend-card .t-delta.up { color: var(--bad); }
+  .trend-card .t-delta.down { color: var(--good); }
+  .trend-card svg { margin-top: 10px; width: 100%; height: 46px; }
+
+  /* Bot access panel */
+  .bot-table { margin-top: 20px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--bg-raised); }
+  .bot-row { display: grid; grid-template-columns: 1fr 140px; padding: 12px 18px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .bot-row:last-child { border-bottom: none; }
+  .bot-row.head { background: var(--accent-soft); font-size: 12px; font-weight: 600; color: var(--ink-soft); }
+
+  /* Filter bar */
+  .filter-bar { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+  .filter-bar input, .filter-bar select {
+    font-family: "Inter", sans-serif; font-size: 13.5px; padding: 9px 12px;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--bg-raised); color: var(--ink);
+  }
+  .filter-bar input { flex: 1; min-width: 220px; }
+  .result-count { font-size: 12.5px; color: var(--ink-soft); margin-top: 8px; }
+
+  /* Pages table */
+  .fx-table { margin-top: 12px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--bg-raised); }
+  .fx-row {
+    display: grid; grid-template-columns: 2fr 90px 90px 130px 110px 120px;
+    gap: 12px; padding: 13px 18px; border-bottom: 1px solid var(--line); align-items: center;
+  }
+  .fx-row:last-child { border-bottom: none; }
+  .fx-row.head { background: var(--accent-soft); font-size: 11.5px; font-weight: 600; color: var(--ink-soft); }
+  .fx-row .url-cell { font-size: 13.5px; overflow-wrap: anywhere; }
+  .fx-row .url-cell a { text-decoration: none; }
+  .fx-row .url-cell .type { display: block; font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+  .pill { display: inline-block; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+  .pill.good { background: var(--good-soft); color: var(--good); }
+  .pill.bad { background: var(--bad-soft); color: var(--bad); }
+  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+
+  @media (max-width: 860px) {
+    .fx-row { grid-template-columns: 1fr; gap: 6px; }
+    .fx-row.head { display: none; }
+    .fx-row:not(.head) { padding: 16px 18px; }
+    .fx-row span.cell-label { display: inline-block; width: 108px; font-size: 11px; color: var(--ink-soft); }
+  }
+
+  footer { margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  footer p { max-width: 640px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top-row">
+    <div>
+      {% if back_link %}<a href="{{ back_link }}" style="font-size:12.5px; display:inline-block; margin-bottom:6px;">&larr; All tracked sites</a><br>{% endif %}
+      <div class="mark">AIO Status <span>&middot; {{ site_name }}</span></div>
+    </div>
+    <div class="meta">Last scan: {{ generated_at }}<br>Runs weekly, every Monday</div>
+  </div>
+
+  <h1 class="title">Current technical AIO state of {{ domain.replace('https://', '').replace('http://', '') }}</h1>
+  <p class="deck">Automated, current-state-only diagnostics against the on-page checklist from the syngenta-seo-aeo-optimizer skill. No recommendations here, just what is true about the site right now.</p>
+
+  <div class="scorecard">
+    <div class="stat">
+      <div class="num">{{ summary.total_pages }}</div>
+      <div class="label">Pages scanned</div>
+    </div>
+    <div class="stat">
+      <div class="num {{ 'bad' if summary.js_content_gap.pct > 0 else '' }}">{{ summary.js_content_gap.pct }}%</div>
+      <div class="label">Pages with a JS content gap</div>
+    </div>
+    <div class="stat">
+      <div class="num {{ 'bad' if summary.faqpage_schema_present.pct < 50 else '' }}">{{ summary.faqpage_schema_present.pct }}%</div>
+      <div class="label">Pages with FAQPage schema</div>
+    </div>
+    <div class="stat">
+      <div class="num {{ 'bad' if summary.missing_h1.pct > 0 else '' }}">{{ summary.missing_h1.pct }}%</div>
+      <div class="label">Pages missing a text H1</div>
+    </div>
+  </div>
+
+  {% if has_history %}
+  <section id="trend">
+    <div class="section-head">
+      <h2 class="h-section">Trend over time</h2>
+      <span class="section-note">{{ trend_dates|length }} weekly scans recorded</span>
+    </div>
+    <div class="trend-grid">
+      {% for key, label in [('js_content_gap_pct', 'JS content gap'), ('faqpage_schema_pct', 'FAQPage schema present'), ('meta_description_ok_pct', 'Meta description in range')] %}
+      <div class="trend-card">
+        <div class="t-label">{{ label }}</div>
+        <div class="t-value">{{ trend_latest[key] if trend_latest[key] is not none else '—' }}{{ '%' if trend_latest[key] is not none else '' }}</div>
+        {% if trend_previous[key] is not none and trend_latest[key] is not none %}
+          {% set delta = (trend_latest[key] - trend_previous[key]) | round(1) %}
+          <div class="t-delta {{ 'up' if delta > 0 else 'down' if delta < 0 else '' }}">
+            {{ '+' if delta > 0 else '' }}{{ delta }}pt vs last scan
+          </div>
+        {% endif %}
+        <svg viewBox="0 0 240 56" preserveAspectRatio="none">
+          <polyline points="{{ sparklines[key] }}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  <section id="bots">
+    <h2 class="h-section">AI crawler access (robots.txt)</h2>
+    <div class="bot-table">
+      <div class="bot-row head"><div>Bot</div><div>Status</div></div>
+      {% for bot, status in summary.ai_bot_access.bots.items() %}
+      <div class="bot-row">
+        <div>{{ bot }}</div>
+        <div>
+          {% if status == 'allowed' %}<span class="pill good">Allowed</span>
+          {% elif status == 'blocked' %}<span class="pill bad">Blocked</span>
+          {% elif status == 'not_mentioned' %}<span class="pill good">Not restricted</span>
+          {% else %}<span class="pill warn">Unknown</span>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section id="pages">
+    <div class="section-head">
+      <h2 class="h-section">Pages ({{ pages|length }})</h2>
+      <span class="section-note">Flagged pages listed first</span>
+    </div>
+
+    <div class="filter-bar">
+      <input type="text" id="urlFilter" placeholder="Filter by URL or page type&hellip;">
+      <select id="issueFilter">
+        <option value="all">All pages</option>
+        <option value="flagged">Only pages with a flag</option>
+      </select>
+    </div>
+    <div class="result-count" id="resultCount"></div>
+
+    <div class="fx-table" id="pageTable">
+      <div class="fx-row head">
+        <div>URL</div><div>JS gap</div><div>H1</div><div>Meta desc.</div><div>FAQ schema</div><div>Alt text</div>
+      </div>
+      {% for p in pages %}
+      {% set total_img = p.alt_text.total_images or 0 %}
+      {% set bad_alt = (p.alt_text.empty_alt or 0) + (p.alt_text.filename_like_alt or 0) %}
+      {% set is_flagged = p.js_content_gap_flag or p.h1_count == 0 or not p.meta_description or not p.has_faqpage_schema %}
+      <div class="fx-row" data-url="{{ p.url|lower }}" data-type="{{ p.page_type }}" data-flagged="{{ 'yes' if is_flagged else 'no' }}">
+        <div class="url-cell">
+          <a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.url }}</a>
+          <span class="type">{{ p.page_type }}</span>
+        </div>
+        <div><span class="cell-label">JS gap</span>{% if p.js_content_gap_flag %}<span class="pill bad">Flagged</span>{% else %}<span class="pill good">OK</span>{% endif %}</div>
+        <div><span class="cell-label">H1</span>
+          {% if p.h1_count == 0 %}<span class="pill bad">Missing</span>
+          {% elif p.h1_count > 1 %}<span class="pill warn">{{ p.h1_count }} found</span>
+          {% else %}<span class="pill good">1</span>{% endif %}
+        </div>
+        <div><span class="cell-label">Meta desc.</span>
+          {% if not p.meta_description %}<span class="pill bad">Missing</span>
+          {% elif p.meta_description_len < 120 or p.meta_description_len > 155 %}<span class="pill warn">{{ p.meta_description_len }} chars</span>
+          {% else %}<span class="pill good">{{ p.meta_description_len }} chars</span>{% endif %}
+        </div>
+        <div><span class="cell-label">FAQ schema</span>{% if p.has_faqpage_schema %}<span class="pill good">Present</span>{% else %}<span class="pill bad">Missing</span>{% endif %}</div>
+        <div><span class="cell-label">Alt text</span>
+          {% if total_img == 0 %}<span class="pill warn">No images</span>
+          {% elif bad_alt == 0 %}<span class="pill good">{{ total_img }}/{{ total_img }} ok</span>
+          {% else %}<span class="pill bad">{{ total_img - bad_alt }}/{{ total_img }} ok</span>{% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Methodology.</strong> Each page is fetched twice: once as raw HTML (no JavaScript, close to what most AI crawlers see) and once through a headless browser (close to what a person or Googlebot sees). The gap between the two is the "JS content gap" flag. Schema is read directly from each page's JSON-LD. H2 phrasing, freshness signals, and page-type grouping are simple text heuristics, not guarantees. This dashboard reports facts only: no recommendations are generated by this tool.</p>
+    <p>Generated automatically by a scheduled script, no AI model runs at scan time. Source: syngenta-seo-aeo-optimizer checklist.</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var urlFilter = document.getElementById('urlFilter');
+  var issueFilter = document.getElementById('issueFilter');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#pageTable .fx-row:not(.head)'));
+  var countEl = document.getElementById('resultCount');
+
+  function applyFilters() {
+    var q = (urlFilter.value || '').toLowerCase().trim();
+    var onlyFlagged = issueFilter.value === 'flagged';
+    var shown = 0;
+    rows.forEach(function (row) {
+      var matchesText = !q || row.dataset.url.indexOf(q) !== -1 || row.dataset.type.indexOf(q) !== -1;
+      var matchesFlag = !onlyFlagged || row.dataset.flagged === 'yes';
+      var visible = matchesText && matchesFlag;
+      row.style.display = visible ? '' : 'none';
+      if (visible) shown++;
+    });
+    countEl.textContent = shown + ' of ' + rows.length + ' pages shown';
+  }
+
+  urlFilter.addEventListener('input', applyFilters);
+  issueFilter.addEventListener('change', applyFilters);
+  applyFilters();
+})();
+</script>
+
+</body>
+</html>
