@@ -80,8 +80,8 @@
       "service": 115
     },
     "js_content_gap": {
-      "count": 284,
-      "pct": 96.6
+      "count": 283,
+      "pct": 96.3
     },
     "missing_h1": {
       "count": 11,
@@ -117,13 +117,13 @@
     },
     "avg_h2_question_phrasing_pct": 1.1,
     "freshness_signal_present": {
-      "count": 290,
-      "pct": 98.6
+      "count": 289,
+      "pct": 98.3
     },
     "image_alt_totals": {
-      "total_images": 10047,
-      "empty_alt": 1901,
-      "filename_like_alt": 817,
+      "total_images": 9996,
+      "empty_alt": 1888,
+      "filename_like_alt": 816,
       "missing_or_broken_src": 182
     },
     "ai_bot_access": {
