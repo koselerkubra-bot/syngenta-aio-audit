@@ -17,7 +17,23 @@ def build_summary(
 ) -> dict:
     total = len(pages)
     if total == 0:
-        return {"total_pages": 0}
+        zero = {"count": 0, "pct": 0.0}
+        return {
+            "total_pages": 0,
+            "pages_by_type": {},
+            "js_content_gap": dict(zero),
+            "missing_h1": dict(zero),
+            "multiple_h1": dict(zero),
+            "meta_title_missing": dict(zero),
+            "meta_title_too_long": dict(zero),
+            "meta_description_missing": dict(zero),
+            "meta_description_out_of_range": dict(zero),
+            "faqpage_schema_present": dict(zero),
+            "any_schema_present": dict(zero),
+            "avg_h2_question_phrasing_pct": None,
+            "freshness_signal_present": dict(zero),
+            "image_alt_totals": {},
+        }
 
     def pct(count: int) -> float:
         return round(100 * count / total, 1)
