@@ -4,122 +4,168 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AIO Status: {{ domain }}</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #F6F7F2;
+    /* Syngenta brand palette */
+    --syn-green: #7FCA3F;
+    --syn-green-soft: #EAF7DC;
+    --syn-green-text: #3D6B1D;
+    --syn-cyan: #00CFCD;
+    --syn-cyan-soft: #DFF9F8;
+    --syn-yellow: #FFBA00;
+    --syn-yellow-soft: #FFF3D9;
+    --syn-pink: #FB4593;
+    --syn-pink-soft: #FDE3ED;
+    --syn-pink-text: #A61756;
+    --syn-blue: #00A0BE;
+    --syn-blue-soft: #DFF3F7;
+    --syn-blue-text: #00647A;
+    --syn-orange: #EB8200;
+    --syn-orange-soft: #FCE8D2;
+    --syn-orange-text: #9C5400;
+    --syn-purple: #AB2E78;
+    --syn-purple-soft: #F3E1EC;
+    --syn-dark-blue: #334C56;
+    --syn-logo-blue: #004896;
+
+    --bg: #F5F5F5;
     --bg-raised: #FFFFFF;
-    --ink: #1B241D;
-    --ink-soft: #4A544C;
-    --line: #DCDFD3;
-    --accent: #2F5233;
-    --accent-soft: #E4EBDF;
-    --bad: #B23A1A;
-    --bad-soft: #F7E4DC;
-    --warn: #B5810F;
-    --warn-soft: #F6EAD1;
-    --good: #3F7A48;
-    --good-soft: #E1EFE1;
+    --ink: #000000;
+    --ink-soft: #666666;
+    --ink-faint: #999999;
+    --line: #E0E0E0;
+
+    --good-bg: var(--syn-green-soft); --good-text: var(--syn-green-text);
+    --bad-bg: var(--syn-pink-soft); --bad-text: var(--syn-pink-text);
+    --warn-bg: var(--syn-orange-soft); --warn-text: var(--syn-orange-text);
+    --info-bg: var(--syn-blue-soft); --info-text: var(--syn-blue-text);
+
     --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
   :root:not([data-theme="light"]) {
     @media (prefers-color-scheme: dark) {
-      --bg: #14170F; --bg-raised: #1B2016; --ink: #ECEEE6; --ink-soft: #ABB4A4;
-      --line: #333A2B; --accent: #8FBF8A; --accent-soft: #232B1F;
-      --bad: #E6825F; --bad-soft: #2E1D16; --warn: #E0B655; --warn-soft: #2C2413;
-      --good: #86C48B; --good-soft: #1C2A1D;
+      --bg: #14171A; --bg-raised: #1E2226; --ink: #F2F2F2; --ink-soft: #ABABAB; --ink-faint: #7A7A7A;
+      --line: #33383D;
+      --good-bg: #1B2A12; --good-text: #9FE871;
+      --bad-bg: #2E1420; --bad-text: #FF9BC2;
+      --warn-bg: #2C1F0C; --warn-text: #FFB74D;
+      --info-bg: #0C2529; --info-text: #5FD6EE;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #14170F; --bg-raised: #1B2016; --ink: #ECEEE6; --ink-soft: #ABB4A4;
-    --line: #333A2B; --accent: #8FBF8A; --accent-soft: #232B1F;
-    --bad: #E6825F; --bad-soft: #2E1D16; --warn: #E0B655; --warn-soft: #2C2413;
-    --good: #86C48B; --good-soft: #1C2A1D;
+    --bg: #14171A; --bg-raised: #1E2226; --ink: #F2F2F2; --ink-soft: #ABABAB; --ink-faint: #7A7A7A;
+    --line: #33383D;
+    --good-bg: #1B2A12; --good-text: #9FE871;
+    --bad-bg: #2E1420; --bad-text: #FF9BC2;
+    --warn-bg: #2C1F0C; --warn-text: #FFB74D;
+    --info-bg: #0C2529; --info-text: #5FD6EE;
   }
   * { box-sizing: border-box; }
   html { scroll-padding-top: 20px; }
   body {
     margin: 0; background: var(--bg); color: var(--ink);
-    font-family: "Inter", system-ui, sans-serif; font-size: 15.5px; line-height: 1.55;
+    font-family: Arial, Helvetica, sans-serif; font-size: 15.5px; line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
-  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; color: var(--ink); margin: 0; line-height: 1.15; }
-  a { color: var(--accent); }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 44px 28px 90px; }
+  h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; font-weight: 700; color: var(--ink); margin: 0; line-height: 1.2; }
+  a { color: var(--syn-logo-blue); }
 
-  .top-row {
-    display: flex; justify-content: space-between; align-items: flex-start;
-    flex-wrap: wrap; gap: 14px; margin-bottom: 30px;
+  .hero {
+    background: var(--syn-dark-blue); color: #FFFFFF;
+    border-bottom: 4px solid var(--syn-green);
   }
-  .top-row .mark { font-family: "Fraunces", serif; font-size: 15px; }
-  .top-row .mark span { color: var(--accent); }
-  .top-row .meta { font-size: 12.5px; color: var(--ink-soft); text-align: right; }
+  .hero .wrap { padding-top: 30px; padding-bottom: 34px; }
+  .hero .eyebrow {
+    font-size: 11.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--syn-green);
+  }
+  .hero .top-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 14px; margin-bottom: 22px;
+  }
+  .hero .top-row a.back { font-size: 12.5px; color: #DCEFFB; display: inline-block; margin-bottom: 6px; text-decoration: none; }
+  .hero .top-row a.back:hover { text-decoration: underline; }
+  .hero .meta { font-size: 12.5px; color: #C7D2D6; text-align: right; }
+  .hero h1.title { font-size: 32px; max-width: 660px; color: #FFFFFF; margin-top: 6px; }
+  .hero .deck { max-width: 580px; font-size: 15.5px; color: #C7D2D6; margin-top: 12px; }
 
-  h1.title { font-size: 34px; max-width: 640px; }
-  .deck { max-width: 560px; font-size: 16px; color: var(--ink-soft); margin-top: 12px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+  main.wrap { padding-top: 34px; padding-bottom: 90px; }
 
   /* Scorecard */
   .scorecard {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
-    background: var(--line); border: 1px solid var(--line); border-radius: 12px;
-    overflow: hidden; margin: 30px 0 0;
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+    margin-top: 26px;
   }
-  .stat { background: var(--bg-raised); padding: 20px 18px; }
-  .stat .num { font-family: "Fraunces", serif; font-size: 30px; font-weight: 600; color: var(--accent); line-height: 1; }
-  .stat .num.bad { color: var(--bad); }
+  .stat {
+    background: var(--bg-raised); border: 1px solid var(--line); border-radius: 10px;
+    padding: 20px 18px; border-top: 4px solid var(--stat-accent, var(--syn-cyan));
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .stat:nth-child(1) { --stat-accent: var(--syn-blue); }
+  .stat:nth-child(2) { --stat-accent: var(--syn-pink); }
+  .stat:nth-child(3) { --stat-accent: var(--syn-cyan); }
+  .stat:nth-child(4) { --stat-accent: var(--syn-orange); }
+  .stat .num { font-size: 30px; font-weight: 700; color: var(--ink); line-height: 1; }
+  .stat .num.good { color: var(--good-text); }
+  .stat .num.bad { color: var(--bad-text); }
   .stat .label { font-size: 12px; color: var(--ink-soft); margin-top: 8px; }
-  @media (max-width: 720px) { .scorecard { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 720px) { .scorecard { grid-template-columns: repeat(2, 1fr); margin-top: 16px; } }
 
-  section { margin-top: 56px; }
+  section { margin-top: 52px; }
   .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
-  h2.h-section { font-size: 22px; }
+  h2.h-section { font-size: 21px; }
   .section-note { font-size: 13px; color: var(--ink-soft); }
 
   /* Trend cards */
-  .trend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 22px; }
+  .trend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
   @media (max-width: 780px) { .trend-grid { grid-template-columns: 1fr; } }
-  .trend-card { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+  .trend-card {
+    background: var(--bg-raised); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px;
+    border-top: 4px solid var(--trend-accent, var(--syn-blue));
+  }
+  .trend-card:nth-child(1) { --trend-accent: var(--syn-pink); }
+  .trend-card:nth-child(2) { --trend-accent: var(--syn-green); }
+  .trend-card:nth-child(3) { --trend-accent: var(--syn-blue); }
   .trend-card .t-label { font-size: 12.5px; color: var(--ink-soft); }
-  .trend-card .t-value { font-family: "Fraunces", serif; font-size: 26px; margin-top: 4px; }
+  .trend-card .t-value { font-size: 25px; font-weight: 700; margin-top: 4px; }
   .trend-card .t-delta { font-size: 12px; margin-top: 2px; }
-  .trend-card .t-delta.up { color: var(--bad); }
-  .trend-card .t-delta.down { color: var(--good); }
+  .trend-card .t-delta.up { color: var(--bad-text); }
+  .trend-card .t-delta.down { color: var(--good-text); }
   .trend-card svg { margin-top: 10px; width: 100%; height: 46px; }
 
   /* Bot access panel */
-  .bot-table { margin-top: 20px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--bg-raised); }
+  .bot-table { margin-top: 18px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--bg-raised); }
   .bot-row { display: grid; grid-template-columns: 1fr 140px; padding: 12px 18px; border-bottom: 1px solid var(--line); font-size: 14px; }
   .bot-row:last-child { border-bottom: none; }
-  .bot-row.head { background: var(--accent-soft); font-size: 12px; font-weight: 600; color: var(--ink-soft); }
+  .bot-row.head { background: var(--bg); font-size: 11.5px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: var(--ink-soft); }
 
   /* Filter bar */
-  .filter-bar { display: flex; gap: 10px; margin-top: 22px; flex-wrap: wrap; }
+  .filter-bar { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
   .filter-bar input, .filter-bar select {
-    font-family: "Inter", sans-serif; font-size: 13.5px; padding: 9px 12px;
+    font-family: Arial, Helvetica, sans-serif; font-size: 13.5px; padding: 9px 12px;
     border: 1px solid var(--line); border-radius: 8px; background: var(--bg-raised); color: var(--ink);
   }
   .filter-bar input { flex: 1; min-width: 220px; }
   .result-count { font-size: 12.5px; color: var(--ink-soft); margin-top: 8px; }
 
   /* Pages table */
-  .fx-table { margin-top: 12px; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--bg-raised); }
+  .fx-table { margin-top: 12px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--bg-raised); }
   .fx-row {
     display: grid; grid-template-columns: 2fr 90px 90px 130px 110px 120px;
     gap: 12px; padding: 13px 18px; border-bottom: 1px solid var(--line); align-items: center;
   }
   .fx-row:last-child { border-bottom: none; }
-  .fx-row.head { background: var(--accent-soft); font-size: 11.5px; font-weight: 600; color: var(--ink-soft); }
+  .fx-row.head { background: var(--bg); font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: var(--ink-soft); }
   .fx-row .url-cell { font-size: 13.5px; overflow-wrap: anywhere; }
   .fx-row .url-cell a { text-decoration: none; }
   .fx-row .url-cell .type { display: block; font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
-  .pill { display: inline-block; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
-  .pill.good { background: var(--good-soft); color: var(--good); }
-  .pill.bad { background: var(--bad-soft); color: var(--bad); }
-  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+  .pill { display: inline-block; font-size: 11.5px; font-weight: 700; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+  .pill.good { background: var(--good-bg); color: var(--good-text); }
+  .pill.bad { background: var(--bad-bg); color: var(--bad-text); }
+  .pill.warn { background: var(--warn-bg); color: var(--warn-text); }
 
   @media (max-width: 860px) {
     .fx-row { grid-template-columns: 1fr; gap: 6px; }
@@ -128,23 +174,27 @@
     .fx-row span.cell-label { display: inline-block; width: 108px; font-size: 11px; color: var(--ink-soft); }
   }
 
-  footer { margin-top: 60px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-soft); }
+  footer { margin-top: 60px; padding-top: 22px; border-top: 3px solid var(--syn-green); font-size: 12.5px; color: var(--ink-soft); }
   footer p { max-width: 640px; }
 </style>
 </head>
 <body>
-<div class="wrap">
 
-  <div class="top-row">
-    <div>
-      {% if back_link %}<a href="{{ back_link }}" style="font-size:12.5px; display:inline-block; margin-bottom:6px;">&larr; All tracked sites</a><br>{% endif %}
-      <div class="mark">AIO Status <span>&middot; {{ site_name }}</span></div>
+<div class="hero">
+  <div class="wrap">
+    <div class="top-row">
+      <div>
+        {% if back_link %}<a class="back" href="{{ back_link }}">&larr; All tracked sites</a>{% endif %}
+        <div class="eyebrow">AIO Status &middot; {{ site_name }}</div>
+      </div>
+      <div class="meta">Last scan: {{ generated_at }}<br>Runs weekly, every Monday</div>
     </div>
-    <div class="meta">Last scan: {{ generated_at }}<br>Runs weekly, every Monday</div>
+    <h1 class="title">Current technical AIO state of {{ domain.replace('https://', '').replace('http://', '') }}</h1>
+    <p class="deck">Automated, current-state-only diagnostics against the on-page checklist from the syngenta-seo-aeo-optimizer skill. No recommendations here, just what is true about the site right now.</p>
   </div>
+</div>
 
-  <h1 class="title">Current technical AIO state of {{ domain.replace('https://', '').replace('http://', '') }}</h1>
-  <p class="deck">Automated, current-state-only diagnostics against the on-page checklist from the syngenta-seo-aeo-optimizer skill. No recommendations here, just what is true about the site right now.</p>
+<main class="wrap">
 
   <div class="scorecard">
     <div class="stat">
@@ -152,15 +202,15 @@
       <div class="label">Pages scanned</div>
     </div>
     <div class="stat">
-      <div class="num {{ 'bad' if summary.js_content_gap.pct > 0 else '' }}">{{ summary.js_content_gap.pct }}%</div>
+      <div class="num {{ 'bad' if summary.js_content_gap.pct > 0 else 'good' }}">{{ summary.js_content_gap.pct }}%</div>
       <div class="label">Pages with a JS content gap</div>
     </div>
     <div class="stat">
-      <div class="num {{ 'bad' if summary.faqpage_schema_present.pct < 50 else '' }}">{{ summary.faqpage_schema_present.pct }}%</div>
+      <div class="num {{ 'bad' if summary.faqpage_schema_present.pct < 50 else 'good' }}">{{ summary.faqpage_schema_present.pct }}%</div>
       <div class="label">Pages with FAQPage schema</div>
     </div>
     <div class="stat">
-      <div class="num {{ 'bad' if summary.missing_h1.pct > 0 else '' }}">{{ summary.missing_h1.pct }}%</div>
+      <div class="num {{ 'bad' if summary.missing_h1.pct > 0 else 'good' }}">{{ summary.missing_h1.pct }}%</div>
       <div class="label">Pages missing a text H1</div>
     </div>
   </div>
@@ -172,7 +222,7 @@
       <span class="section-note">{{ trend_dates|length }} weekly scans recorded</span>
     </div>
     <div class="trend-grid">
-      {% for key, label in [('js_content_gap_pct', 'JS content gap'), ('faqpage_schema_pct', 'FAQPage schema present'), ('meta_description_ok_pct', 'Meta description in range')] %}
+      {% for key, label, stroke in [('js_content_gap_pct', 'JS content gap', 'var(--syn-pink)'), ('faqpage_schema_pct', 'FAQPage schema present', 'var(--syn-green)'), ('meta_description_ok_pct', 'Meta description in range', 'var(--syn-blue)')] %}
       <div class="trend-card">
         <div class="t-label">{{ label }}</div>
         <div class="t-value">{{ trend_latest[key] if trend_latest[key] is not none else '—' }}{{ '%' if trend_latest[key] is not none else '' }}</div>
@@ -183,7 +233,7 @@
           </div>
         {% endif %}
         <svg viewBox="0 0 240 56" preserveAspectRatio="none">
-          <polyline points="{{ sparklines[key] }}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <polyline points="{{ sparklines[key] }}" fill="none" stroke="{{ stroke }}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </div>
       {% endfor %}
@@ -264,7 +314,7 @@
     <p>Generated automatically by a scheduled script, no AI model runs at scan time. Source: syngenta-seo-aeo-optimizer checklist.</p>
   </footer>
 
-</div>
+</main>
 
 <script>
 (function () {
