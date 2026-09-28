@@ -1193,7 +1193,7 @@
     "url": "https://www.syngenta.ca/people-culture",
     "page_type": "other",
     "fetched_raw_ok": true,
-    "fetched_rendered_ok": true,
+    "fetched_rendered_ok": false,
     "meta_title": "People and culture | Syngenta Canada",
     "meta_title_len": 36,
     "meta_description": "Get information on the careers at Syngenta, the people that work there and student and graduate opportunities.",
@@ -1209,16 +1209,16 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 68,
-      "empty_alt": 3,
-      "filename_like_alt": 2,
+      "total_images": 27,
+      "empty_alt": 0,
+      "filename_like_alt": 1,
       "missing_or_broken_src": 0
     },
-    "freshness_signal_present": true,
+    "freshness_signal_present": false,
     "raw_word_count": 1418,
-    "rendered_word_count": 4653,
-    "js_content_gap_ratio": 3.28,
-    "js_content_gap_flag": true
+    "rendered_word_count": 0,
+    "js_content_gap_ratio": 0.0,
+    "js_content_gap_flag": false
   },
   {
     "url": "https://www.syngenta.ca/pests/canola",
@@ -5727,7 +5727,7 @@
   {
     "url": "https://www.syngenta.ca/productsdetail/allegro-500f/vegetables",
     "page_type": "product",
-    "fetched_raw_ok": true,
+    "fetched_raw_ok": false,
     "fetched_rendered_ok": true,
     "meta_title": "Allegro® 500F - Fungicide - Vegetables | Syngenta CA",
     "meta_title_len": 52,
@@ -5755,9 +5755,9 @@
       "missing_or_broken_src": 1
     },
     "freshness_signal_present": true,
-    "raw_word_count": 375,
+    "raw_word_count": 0,
     "rendered_word_count": 4561,
-    "js_content_gap_ratio": 12.16,
+    "js_content_gap_ratio": Infinity,
     "js_content_gap_flag": true
   },
   {

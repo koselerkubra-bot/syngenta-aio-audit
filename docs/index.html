@@ -116,7 +116,7 @@
   <div class="mark">AIO Status <span>&middot; all tracked sites</span></div>
   <h1 class="title">Technical AIO status across every tracked site</h1>
   <p class="deck">One dashboard per site, all built from the same on-page checklist, updated on a weekly schedule. No AI model runs at scan time.</p>
-  <div class="meta">Last run: 2026-09-28 08:56 UTC</div>
+  <div class="meta">Last run: 2026-09-28 10:50 UTC</div>
 
   <section id="sites">
     <h2 class="h-section">Tracked sites</h2>
@@ -130,7 +130,7 @@
         </div>
         <div class="stats">
           <div class="stat"><b>294</b>pages scanned</div>
-          <div class="stat"><b class="bad">96.6%</b>JS content gap</div>
+          <div class="stat"><b class="bad">96.3%</b>JS content gap</div>
           <div class="stat"><b class="bad">0.0%</b>FAQ schema present</div>
         </div>
         <div class="scanned">Last scanned 2026-09-28</div>
@@ -162,7 +162,7 @@
           <strong>Creating a token (one-time, ~2 minutes):</strong>
           <ol>
             <li>On GitHub, go to Settings &rarr; Developer settings &rarr; Personal access tokens &rarr; Fine-grained tokens &rarr; Generate new token.</li>
-            <li>Under "Repository access", choose "Only select repositories" and pick <code>/</code>.</li>
+            <li>Under "Repository access", choose "Only select repositories" and pick <code>koselerkubra-bot/syngenta-aio-audit</code>.</li>
             <li>Under "Permissions", set <strong>Actions</strong> to "Read and write". Leave everything else as-is.</li>
             <li>Generate the token and copy it (it's only shown once). Paste it above.</li>
           </ol>
@@ -190,9 +190,9 @@
 
 <script>
 (function () {
-  var GH_OWNER = "";
-  var GH_REPO = "";
-  var GH_WORKFLOW = "";
+  var GH_OWNER = "koselerkubra-bot";
+  var GH_REPO = "syngenta-aio-audit";
+  var GH_WORKFLOW = "weekly-scan.yml";
   var TOKEN_KEY = "aio_audit_gh_token";
 
   var tokenInput = document.getElementById("ghToken");
