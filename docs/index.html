@@ -11,81 +11,314 @@
   :root {
     --bg: #F6F7F2; --bg-raised: #FFFFFF; --ink: #1B241D; --ink-soft: #4A544C;
     --line: #DCDFD3; --accent: #2F5233; --accent-soft: #E4EBDF;
-    --bad: #B23A1A; --bad-soft: #F7E4DC; --good: #3F7A48; --good-soft: #E1EFE1;
+    --bad: #B23A1A; --bad-soft: #F7E4DC; --warn: #B5810F; --warn-soft: #F6EAD1;
+    --good: #3F7A48; --good-soft: #E1EFE1;
     padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
   }
   :root:not([data-theme="light"]) {
     @media (prefers-color-scheme: dark) {
       --bg: #14170F; --bg-raised: #1B2016; --ink: #ECEEE6; --ink-soft: #ABB4A4;
       --line: #333A2B; --accent: #8FBF8A; --accent-soft: #232B1F;
-      --bad: #E6825F; --bad-soft: #2E1D16; --good: #86C48B; --good-soft: #1C2A1D;
+      --bad: #E6825F; --bad-soft: #2E1D16; --warn: #E0B655; --warn-soft: #2C2413;
+      --good: #86C48B; --good-soft: #1C2A1D;
     }
   }
   :root[data-theme="dark"] {
     --bg: #14170F; --bg-raised: #1B2016; --ink: #ECEEE6; --ink-soft: #ABB4A4;
     --line: #333A2B; --accent: #8FBF8A; --accent-soft: #232B1F;
-    --bad: #E6825F; --bad-soft: #2E1D16; --good: #86C48B; --good-soft: #1C2A1D;
+    --bad: #E6825F; --bad-soft: #2E1D16; --warn: #E0B655; --warn-soft: #2C2413;
+    --good: #86C48B; --good-soft: #1C2A1D;
   }
   * { box-sizing: border-box; }
   body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Inter", system-ui, sans-serif; font-size: 15.5px; line-height: 1.55; }
-  h1, h2 { font-family: "Fraunces", Georgia, serif; font-weight: 600; margin: 0; }
-  a { color: var(--accent); text-decoration: none; }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; margin: 0; }
+  a { color: var(--accent); }
   .wrap { max-width: 900px; margin: 0 auto; padding: 48px 28px 90px; }
   .mark { font-family: "Fraunces", serif; font-size: 15px; }
   .mark span { color: var(--accent); }
   h1.title { font-size: 32px; margin-top: 18px; }
-  .deck { max-width: 560px; color: var(--ink-soft); margin-top: 12px; }
+  .deck { max-width: 620px; color: var(--ink-soft); margin-top: 12px; }
   .meta { font-size: 12.5px; color: var(--ink-soft); margin-top: 20px; }
 
-  .site-list { margin-top: 30px; display: grid; gap: 14px; }
+  section { margin-top: 46px; }
+  h2.h-section { font-size: 21px; }
+  .section-note { font-size: 13px; color: var(--ink-soft); margin-top: 8px; max-width: 620px; }
+
+  /* Site cards */
+  .site-list { margin-top: 26px; display: grid; gap: 14px; }
   .site-card {
     display: block; background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px;
-    padding: 20px 22px; transition: border-color 0.15s ease;
+    padding: 20px 22px; transition: border-color 0.15s ease; text-decoration: none;
   }
   .site-card:hover { border-color: var(--accent); }
   .site-card .row1 { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
-  .site-card h2 { font-size: 19px; color: var(--ink); }
+  .site-card h3 { font-size: 19px; color: var(--ink); }
   .site-card .domain { font-size: 12.5px; color: var(--ink-soft); }
   .site-card .stats { display: flex; gap: 22px; margin-top: 14px; flex-wrap: wrap; }
   .site-card .stat { font-size: 12.5px; color: var(--ink-soft); }
   .site-card .stat b { display: block; font-family: "Fraunces", serif; font-size: 20px; color: var(--ink); font-weight: 600; }
   .site-card .stat b.bad { color: var(--bad); }
   .site-card .scanned { font-size: 11.5px; color: var(--ink-soft); margin-top: 12px; }
+  .empty { margin-top: 26px; padding: 26px; border: 1px dashed var(--line); border-radius: 12px; color: var(--ink-soft); font-size: 14px; }
 
-  .empty { margin-top: 40px; padding: 26px; border: 1px dashed var(--line); border-radius: 12px; color: var(--ink-soft); font-size: 14px; }
+  /* Add-site panel */
+  .panel { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 14px; padding: 24px 26px; margin-top: 22px; }
+  .field { margin-top: 16px; }
+  .field:first-child { margin-top: 0; }
+  .field label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .field .hint { font-size: 12px; color: var(--ink-soft); margin-top: 5px; }
+  .field input {
+    width: 100%; font-family: "Inter", sans-serif; font-size: 14px; padding: 10px 12px;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink);
+  }
+  .field input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 620px) { .row-2 { grid-template-columns: 1fr; } }
 
-  footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-soft); max-width: 620px; }
+  button.primary {
+    margin-top: 18px; font-family: "Inter", sans-serif; font-size: 14px; font-weight: 600;
+    background: var(--accent); color: var(--bg-raised); border: none; border-radius: 8px;
+    padding: 11px 18px; cursor: pointer;
+  }
+  button.primary:disabled { opacity: 0.55; cursor: default; }
+  button.link {
+    background: none; border: none; padding: 0; font-family: "Inter", sans-serif; font-size: 12.5px;
+    color: var(--accent); text-decoration: underline; cursor: pointer; margin-top: 10px;
+  }
+
+  .status { margin-top: 14px; font-size: 13.5px; padding: 10px 14px; border-radius: 8px; display: none; }
+  .status.show { display: block; }
+  .status.loading { background: var(--accent-soft); color: var(--ink); }
+  .status.success { background: var(--good-soft); color: var(--good); }
+  .status.error { background: var(--bad-soft); color: var(--bad); }
+
+  .token-help { margin-top: 14px; font-size: 12.5px; color: var(--ink-soft); border-top: 1px dashed var(--line); padding-top: 14px; display: none; }
+  .token-help.show { display: block; }
+  .token-help ol { margin: 8px 0 0; padding-left: 20px; }
+  .token-help li { margin-bottom: 4px; }
+
+  /* Recent runs */
+  .runs-table { margin-top: 16px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .runs-row { display: grid; grid-template-columns: 90px 1fr 140px 70px; gap: 10px; padding: 10px 14px; font-size: 13px; border-bottom: 1px solid var(--line); align-items: center; }
+  .runs-row:last-child { border-bottom: none; }
+  .runs-row.head { background: var(--accent-soft); font-size: 11.5px; font-weight: 600; color: var(--ink-soft); }
+  .pill { display: inline-block; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+  .pill.good { background: var(--good-soft); color: var(--good); }
+  .pill.bad { background: var(--bad-soft); color: var(--bad); }
+  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+  @media (max-width: 620px) { .runs-row { grid-template-columns: 1fr; gap: 4px; } .runs-row.head { display: none; } }
+
+  footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-soft); max-width: 640px; }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="mark">AIO Status <span>&middot; all tracked sites</span></div>
   <h1 class="title">Technical AIO status across every tracked site</h1>
-  <p class="deck">One dashboard per site, all built from the same on-page checklist. Add a site from the repository's Actions tab, no code changes needed.</p>
-  <div class="meta">Last run: 2026-09-28 06:47 UTC</div>
+  <p class="deck">One dashboard per site, all built from the same on-page checklist, updated on a weekly schedule. No AI model runs at scan time.</p>
+  <div class="meta">Last run: 2026-09-28 08:56 UTC</div>
 
-  
-  <div class="site-list">
+  <section id="sites">
+    <h2 class="h-section">Tracked sites</h2>
     
-    <a class="site-card" href="syngenta-ca/">
-      <div class="row1">
-        <h2>Syngenta Canada</h2>
-        <span class="domain">www.syngenta.ca</span>
-      </div>
-      <div class="stats">
-        <div class="stat"><b>294</b>pages scanned</div>
-        <div class="stat"><b class="bad">95.9%</b>JS content gap</div>
-        <div class="stat"><b class="bad">0.0%</b>FAQ schema present</div>
-      </div>
-      <div class="scanned">Last scanned 2026-09-28</div>
-    </a>
+    <div class="site-list">
+      
+      <a class="site-card" href="syngenta-ca/">
+        <div class="row1">
+          <h3>Syngenta Canada</h3>
+          <span class="domain">www.syngenta.ca</span>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>294</b>pages scanned</div>
+          <div class="stat"><b class="bad">96.6%</b>JS content gap</div>
+          <div class="stat"><b class="bad">0.0%</b>FAQ schema present</div>
+        </div>
+        <div class="scanned">Last scanned 2026-09-28</div>
+      </a>
+      
+    </div>
     
-  </div>
-  
+  </section>
+
+  <section id="add-site">
+    <h2 class="h-section">Add a site</h2>
+    <p class="section-note">Starts a scan of a new site directly from this page. This calls GitHub's own API from your browser, nothing runs on any external server, and no AI model is involved. The new site is added automatically and gets its own dashboard once the scan finishes (it takes a while, every page is fetched twice).</p>
+
+    <div class="panel">
+      <div class="field">
+        <label for="siteUrl">Any URL on the new site</label>
+        <input type="url" id="siteUrl" placeholder="https://www.syngenta.com.mx/">
+        <div class="hint">The domain root and /sitemap.xml are worked out automatically.</div>
+      </div>
+      <div class="field">
+        <label for="siteName">Display name (optional)</label>
+        <input type="text" id="siteName" placeholder="Syngenta Mexico">
+      </div>
+      <div class="field">
+        <label for="ghToken">Your GitHub token</label>
+        <input type="password" id="ghToken" placeholder="ghp_... or github_pat_...">
+        <div class="hint">Kept only in this browser (never sent anywhere except GitHub's own API). <button type="button" class="link" id="tokenHelpToggle">Don't have one? Show me how.</button></div>
+        <div class="token-help" id="tokenHelp">
+          <strong>Creating a token (one-time, ~2 minutes):</strong>
+          <ol>
+            <li>On GitHub, go to Settings &rarr; Developer settings &rarr; Personal access tokens &rarr; Fine-grained tokens &rarr; Generate new token.</li>
+            <li>Under "Repository access", choose "Only select repositories" and pick <code>/</code>.</li>
+            <li>Under "Permissions", set <strong>Actions</strong> to "Read and write". Leave everything else as-is.</li>
+            <li>Generate the token and copy it (it's only shown once). Paste it above.</li>
+          </ol>
+          <p>You need to be a collaborator on the repository for this to work. If you're not sure, ask whoever manages it to add you under Settings &rarr; Collaborators.</p>
+        </div>
+      </div>
+      <button type="button" class="primary" id="addSiteBtn">Add &amp; start scan</button>
+      <div class="status" id="addStatus"></div>
+    </div>
+  </section>
+
+  <section id="runs">
+    <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:10px;">
+      <h2 class="h-section">Recent scans</h2>
+      <button type="button" class="link" id="refreshRuns">Refresh</button>
+    </div>
+    <p class="section-note">Uses the same token from the form above (needed to see run status on a private repository). Leave the token field empty if the repository is public.</p>
+    <div id="runsContainer"></div>
+  </section>
 
   <footer>
-    <p>Each site's dashboard reports current-state facts only, no recommendations. Generated automatically by a scheduled script, no AI model runs at scan time.</p>
+    <p>Each site's dashboard reports current-state facts only, no recommendations. Generated automatically by a scheduled script; adding a site or checking status from this page talks directly to GitHub's API from your browser, nothing else is involved.</p>
   </footer>
 </div>
+
+<script>
+(function () {
+  var GH_OWNER = "";
+  var GH_REPO = "";
+  var GH_WORKFLOW = "";
+  var TOKEN_KEY = "aio_audit_gh_token";
+
+  var tokenInput = document.getElementById("ghToken");
+  var tokenHelp = document.getElementById("tokenHelp");
+  var tokenHelpToggle = document.getElementById("tokenHelpToggle");
+  var addBtn = document.getElementById("addSiteBtn");
+  var statusEl = document.getElementById("addStatus");
+  var refreshBtn = document.getElementById("refreshRuns");
+  var runsContainer = document.getElementById("runsContainer");
+
+  try {
+    var savedToken = window.localStorage.getItem(TOKEN_KEY);
+    if (savedToken) tokenInput.value = savedToken;
+  } catch (e) { /* localStorage unavailable, e.g. some private-browsing modes: just skip restoring */ }
+
+  tokenHelpToggle.addEventListener("click", function () {
+    tokenHelp.classList.toggle("show");
+  });
+
+  function setStatus(kind, message) {
+    statusEl.className = "status show " + kind;
+    statusEl.textContent = message;
+  }
+
+  function saveToken(token) {
+    try { window.localStorage.setItem(TOKEN_KEY, token); } catch (e) { /* ignore */ }
+  }
+
+  function authHeaders(token) {
+    var headers = { "Accept": "application/vnd.github+json" };
+    if (token) headers["Authorization"] = "Bearer " + token;
+    return headers;
+  }
+
+  addBtn.addEventListener("click", function () {
+    var url = (document.getElementById("siteUrl").value || "").trim();
+    var name = (document.getElementById("siteName").value || "").trim();
+    var token = (tokenInput.value || "").trim();
+
+    if (!url) { setStatus("error", "Paste a URL on the new site first."); return; }
+    if (!/^https?:\/\//i.test(url)) { setStatus("error", "The URL needs to start with http:// or https://"); return; }
+    if (!token) { setStatus("error", "A GitHub token is needed to start a scan. See \u201cDon't have one?\u201d above."); return; }
+
+    saveToken(token);
+    addBtn.disabled = true;
+    setStatus("loading", "Starting the scan\u2026");
+
+    var body = { ref: "main", inputs: { add_url: url } };
+    if (name) body.inputs.site_name = name;
+
+    fetch("https://api.github.com/repos/" + GH_OWNER + "/" + GH_REPO + "/actions/workflows/" + GH_WORKFLOW + "/dispatches", {
+      method: "POST",
+      headers: Object.assign(authHeaders(token), { "Content-Type": "application/json" }),
+      body: JSON.stringify(body)
+    }).then(function (resp) {
+      addBtn.disabled = false;
+      if (resp.status === 204) {
+        setStatus("success", "Started. This can take a while, every page is fetched twice. Check \u201cRecent scans\u201d below in a minute, and refresh this page once it finishes to see the new site.");
+        setTimeout(loadRuns, 4000);
+      } else if (resp.status === 401 || resp.status === 403) {
+        setStatus("error", "GitHub rejected the token (401/403). Check it has \u201cActions: Read and write\u201d on this repository and hasn't expired.");
+      } else if (resp.status === 404) {
+        setStatus("error", "Workflow or repository not found (404). You may not be a collaborator on this repository yet.");
+      } else {
+        resp.text().then(function (t) {
+          setStatus("error", "GitHub returned an unexpected error (" + resp.status + "). " + t.slice(0, 200));
+        });
+      }
+    }).catch(function (err) {
+      addBtn.disabled = false;
+      setStatus("error", "Could not reach GitHub: " + err.message);
+    });
+  });
+
+  function relativeTime(iso) {
+    var diffMs = Date.now() - new Date(iso).getTime();
+    var mins = Math.round(diffMs / 60000);
+    if (mins < 1) return "just now";
+    if (mins < 60) return mins + "m ago";
+    var hours = Math.round(mins / 60);
+    if (hours < 24) return hours + "h ago";
+    return Math.round(hours / 24) + "d ago";
+  }
+
+  function statusPill(run) {
+    if (run.status !== "completed") return '<span class="pill warn">' + run.status + '</span>';
+    if (run.conclusion === "success") return '<span class="pill good">success</span>';
+    return '<span class="pill bad">' + (run.conclusion || "failed") + '</span>';
+  }
+
+  function loadRuns() {
+    var token = (tokenInput.value || "").trim();
+    runsContainer.innerHTML = '<p class="section-note">Loading\u2026</p>';
+    fetch("https://api.github.com/repos/" + GH_OWNER + "/" + GH_REPO + "/actions/workflows/" + GH_WORKFLOW + "/runs?per_page=6", {
+      headers: authHeaders(token)
+    }).then(function (resp) {
+      if (!resp.ok) throw new Error("HTTP " + resp.status);
+      return resp.json();
+    }).then(function (data) {
+      var runs = data.workflow_runs || [];
+      if (runs.length === 0) {
+        runsContainer.innerHTML = '<p class="section-note">No runs yet.</p>';
+        return;
+      }
+      var rows = ['<div class="runs-row head"><div>Status</div><div>Trigger</div><div>When</div><div>Log</div></div>'];
+      runs.forEach(function (run) {
+        var trigger = run.event === "workflow_dispatch" ? "Manual / Add site" : "Scheduled";
+        rows.push(
+          '<div class="runs-row">' +
+          '<div>' + statusPill(run) + '</div>' +
+          '<div>' + trigger + '</div>' +
+          '<div>' + relativeTime(run.created_at) + '</div>' +
+          '<div><a href="' + run.html_url + '" target="_blank" rel="noopener">View</a></div>' +
+          '</div>'
+        );
+      });
+      runsContainer.innerHTML = '<div class="runs-table">' + rows.join("") + '</div>';
+    }).catch(function (err) {
+      runsContainer.innerHTML = '<p class="section-note">Could not load runs (' + err.message + '). If this repository is private, paste a token above first.</p>';
+    });
+  }
+
+  refreshBtn.addEventListener("click", loadRuns);
+  loadRuns();
+})();
+</script>
+
 </body>
 </html>

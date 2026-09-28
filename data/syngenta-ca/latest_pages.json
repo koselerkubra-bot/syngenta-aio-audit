@@ -1193,7 +1193,7 @@
     "url": "https://www.syngenta.ca/people-culture",
     "page_type": "other",
     "fetched_raw_ok": true,
-    "fetched_rendered_ok": false,
+    "fetched_rendered_ok": true,
     "meta_title": "People and culture | Syngenta Canada",
     "meta_title_len": 36,
     "meta_description": "Get information on the careers at Syngenta, the people that work there and student and graduate opportunities.",
@@ -1209,16 +1209,16 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 0,
-      "filename_like_alt": 1,
+      "total_images": 68,
+      "empty_alt": 3,
+      "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
-    "freshness_signal_present": false,
+    "freshness_signal_present": true,
     "raw_word_count": 1418,
-    "rendered_word_count": 0,
-    "js_content_gap_ratio": 0.0,
-    "js_content_gap_flag": false
+    "rendered_word_count": 4653,
+    "js_content_gap_ratio": 3.28,
+    "js_content_gap_flag": true
   },
   {
     "url": "https://www.syngenta.ca/pests/canola",
@@ -6719,23 +6719,30 @@
     "url": "https://www.syngenta.ca/productsdetail/cruiser-maxx-potato-extreme",
     "page_type": "product",
     "fetched_raw_ok": false,
-    "fetched_rendered_ok": false,
-    "meta_title": null,
-    "meta_title_len": 0,
+    "fetched_rendered_ok": true,
+    "meta_title": "OOPS! Something went wrong | Syngenta Canada Inc.",
+    "meta_title_len": 49,
     "meta_description": null,
     "meta_description_len": 0,
-    "h1_count": 0,
-    "h1_text": null,
+    "h1_count": 1,
+    "h1_text": "Hmmm, something is not right here.",
     "h2_texts": [],
     "h2_question_ratio": 0.0,
-    "schema_types_found": [],
+    "schema_types_found": [
+      "Organization"
+    ],
     "has_faqpage_schema": false,
-    "alt_text": {},
-    "freshness_signal_present": false,
+    "alt_text": {
+      "total_images": 27,
+      "empty_alt": 3,
+      "filename_like_alt": 2,
+      "missing_or_broken_src": 0
+    },
+    "freshness_signal_present": true,
     "raw_word_count": 0,
-    "rendered_word_count": 0,
-    "js_content_gap_ratio": 0.0,
-    "js_content_gap_flag": false
+    "rendered_word_count": 3264,
+    "js_content_gap_ratio": Infinity,
+    "js_content_gap_flag": true
   },
   {
     "url": "https://www.syngenta.ca/productsdetail/cruiser-maxx-vibrance-beans",

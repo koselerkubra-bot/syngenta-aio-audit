@@ -80,20 +80,20 @@
       "service": 115
     },
     "js_content_gap": {
-      "count": 282,
-      "pct": 95.9
+      "count": 284,
+      "pct": 96.6
     },
     "missing_h1": {
-      "count": 12,
-      "pct": 4.1
+      "count": 11,
+      "pct": 3.7
     },
     "multiple_h1": {
       "count": 3,
       "pct": 1.0
     },
     "meta_title_missing": {
-      "count": 6,
-      "pct": 2.0
+      "count": 5,
+      "pct": 1.7
     },
     "meta_title_too_long": {
       "count": 6,
@@ -112,18 +112,18 @@
       "pct": 0.0
     },
     "any_schema_present": {
-      "count": 288,
-      "pct": 98.0
+      "count": 289,
+      "pct": 98.3
     },
     "avg_h2_question_phrasing_pct": 1.1,
     "freshness_signal_present": {
-      "count": 288,
-      "pct": 98.0
+      "count": 290,
+      "pct": 98.6
     },
     "image_alt_totals": {
-      "total_images": 9969,
-      "empty_alt": 1885,
-      "filename_like_alt": 814,
+      "total_images": 10037,
+      "empty_alt": 1891,
+      "filename_like_alt": 817,
       "missing_or_broken_src": 182
     },
     "ai_bot_access": {
