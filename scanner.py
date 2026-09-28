@@ -152,6 +152,7 @@ def rebuild_hub(cfg: dict, sites: list[dict]) -> None:
         output_path=cfg["hub_output"],
         generated_at=datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
         sites=hub_entries,
+        github=cfg.get("github"),
     )
     logger.info("Hub page written to %s (%d site(s) listed)", cfg["hub_output"], len(hub_entries))
 
