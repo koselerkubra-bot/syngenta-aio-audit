@@ -55,3 +55,12 @@ dashboard_output: "docs/{slug}/index.html"
 # The top-level page that lists every tracked site and links to each
 # one's dashboard. This is what GitHub Pages serves at the repo root.
 hub_output: "docs/index.html"
+
+# Where this repo lives on GitHub. The hub page's "Add a site" form uses
+# this to call the GitHub Actions API directly from the browser (with a
+# token the person pastes in, kept only in their own browser). Update
+# these three values if the repo is ever renamed or moved.
+github:
+  owner: "koselerkubra-bot"
+  repo: "syngenta-aio-audit"
+  workflow_file: "weekly-scan.yml"
