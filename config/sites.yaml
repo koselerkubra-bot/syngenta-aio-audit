@@ -1,6 +1,11 @@
 sites:
-  - name: "Syngenta Canada"
-    slug: "syngenta-ca"
-    domain: "https://www.syngenta.ca"
-    sitemap_urls:
-      - "https://www.syngenta.ca/sitemap.xml"
+- name: Syngenta Canada
+  slug: syngenta-ca
+  domain: https://www.syngenta.ca
+  sitemap_urls:
+  - https://www.syngenta.ca/sitemap.xml
+- name: Syngenta Turkiye
+  slug: syngenta-com-tr
+  domain: https://www.syngenta.com.tr
+  sitemap_urls:
+  - https://www.syngenta.com.tr/sitemap.xml

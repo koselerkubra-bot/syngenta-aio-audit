@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AIO Status: https://www.syngenta.com.tr</title>
+<style>
+  :root {
+    /* Syngenta brand palette */
+    --syn-green: #7FCA3F;
+    --syn-green-soft: #EAF7DC;
+    --syn-green-text: #3D6B1D;
+    --syn-cyan: #00CFCD;
+    --syn-cyan-soft: #DFF9F8;
+    --syn-yellow: #FFBA00;
+    --syn-yellow-soft: #FFF3D9;
+    --syn-pink: #FB4593;
+    --syn-pink-soft: #FDE3ED;
+    --syn-pink-text: #A61756;
+    --syn-blue: #00A0BE;
+    --syn-blue-soft: #DFF3F7;
+    --syn-blue-text: #00647A;
+    --syn-orange: #EB8200;
+    --syn-orange-soft: #FCE8D2;
+    --syn-orange-text: #9C5400;
+    --syn-purple: #AB2E78;
+    --syn-purple-soft: #F3E1EC;
+    --syn-dark-blue: #334C56;
+    --syn-logo-blue: #004896;
+
+    --bg: #F5F5F5;
+    --bg-raised: #FFFFFF;
+    --ink: #000000;
+    --ink-soft: #666666;
+    --ink-faint: #999999;
+    --line: #E0E0E0;
+
+    --good-bg: var(--syn-green-soft); --good-text: var(--syn-green-text);
+    --bad-bg: var(--syn-pink-soft); --bad-text: var(--syn-pink-text);
+    --warn-bg: var(--syn-orange-soft); --warn-text: var(--syn-orange-text);
+    --info-bg: var(--syn-blue-soft); --info-text: var(--syn-blue-text);
+
+    --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #14171A; --bg-raised: #1E2226; --ink: #F2F2F2; --ink-soft: #ABABAB; --ink-faint: #7A7A7A;
+      --line: #33383D;
+      --good-bg: #1B2A12; --good-text: #9FE871;
+      --bad-bg: #2E1420; --bad-text: #FF9BC2;
+      --warn-bg: #2C1F0C; --warn-text: #FFB74D;
+      --info-bg: #0C2529; --info-text: #5FD6EE;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14171A; --bg-raised: #1E2226; --ink: #F2F2F2; --ink-soft: #ABABAB; --ink-faint: #7A7A7A;
+    --line: #33383D;
+    --good-bg: #1B2A12; --good-text: #9FE871;
+    --bad-bg: #2E1420; --bad-text: #FF9BC2;
+    --warn-bg: #2C1F0C; --warn-text: #FFB74D;
+    --info-bg: #0C2529; --info-text: #5FD6EE;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: 20px; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: Arial, Helvetica, sans-serif; font-size: 15.5px; line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3 { font-family: Arial, Helvetica, sans-serif; font-weight: 700; color: var(--ink); margin: 0; line-height: 1.2; }
+  a { color: var(--syn-logo-blue); }
+
+  .hero {
+    background: var(--syn-dark-blue); color: #FFFFFF;
+    border-bottom: 4px solid var(--syn-green);
+  }
+  .hero .wrap { padding-top: 30px; padding-bottom: 34px; }
+  .hero .eyebrow {
+    font-size: 11.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--syn-green);
+  }
+  .hero .top-row {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    flex-wrap: wrap; gap: 14px; margin-bottom: 22px;
+  }
+  .hero .top-row a.back { font-size: 12.5px; color: #DCEFFB; display: inline-block; margin-bottom: 6px; text-decoration: none; }
+  .hero .top-row a.back:hover { text-decoration: underline; }
+  .hero .meta { font-size: 12.5px; color: #C7D2D6; text-align: right; }
+  .hero h1.title { font-size: 32px; max-width: 660px; color: #FFFFFF; margin-top: 6px; }
+  .hero .deck { max-width: 580px; font-size: 15.5px; color: #C7D2D6; margin-top: 12px; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 28px; }
+  main.wrap { padding-top: 34px; padding-bottom: 90px; }
+
+  /* Scorecard */
+  .scorecard {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+    margin-top: 26px;
+  }
+  .stat {
+    background: var(--bg-raised); border: 1px solid var(--line); border-radius: 10px;
+    padding: 20px 18px; border-top: 4px solid var(--stat-accent, var(--syn-cyan));
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+  .stat:nth-child(1) { --stat-accent: var(--syn-blue); }
+  .stat:nth-child(2) { --stat-accent: var(--syn-pink); }
+  .stat:nth-child(3) { --stat-accent: var(--syn-cyan); }
+  .stat:nth-child(4) { --stat-accent: var(--syn-orange); }
+  .stat .num { font-size: 30px; font-weight: 700; color: var(--ink); line-height: 1; }
+  .stat .num.good { color: var(--good-text); }
+  .stat .num.bad { color: var(--bad-text); }
+  .stat .label { font-size: 12px; color: var(--ink-soft); margin-top: 8px; }
+  @media (max-width: 720px) { .scorecard { grid-template-columns: repeat(2, 1fr); margin-top: 16px; } }
+
+  section { margin-top: 52px; }
+  .section-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  h2.h-section { font-size: 21px; }
+  .section-note { font-size: 13px; color: var(--ink-soft); }
+
+  /* Trend cards */
+  .trend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+  @media (max-width: 780px) { .trend-grid { grid-template-columns: 1fr; } }
+  .trend-card {
+    background: var(--bg-raised); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px;
+    border-top: 4px solid var(--trend-accent, var(--syn-blue));
+  }
+  .trend-card:nth-child(1) { --trend-accent: var(--syn-pink); }
+  .trend-card:nth-child(2) { --trend-accent: var(--syn-green); }
+  .trend-card:nth-child(3) { --trend-accent: var(--syn-blue); }
+  .trend-card .t-label { font-size: 12.5px; color: var(--ink-soft); }
+  .trend-card .t-value { font-size: 25px; font-weight: 700; margin-top: 4px; }
+  .trend-card .t-delta { font-size: 12px; margin-top: 2px; }
+  .trend-card .t-delta.up { color: var(--bad-text); }
+  .trend-card .t-delta.down { color: var(--good-text); }
+  .trend-card svg { margin-top: 10px; width: 100%; height: 46px; }
+
+  /* Bot access panel */
+  .bot-table { margin-top: 18px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--bg-raised); }
+  .bot-row { display: grid; grid-template-columns: 1fr 140px; padding: 12px 18px; border-bottom: 1px solid var(--line); font-size: 14px; }
+  .bot-row:last-child { border-bottom: none; }
+  .bot-row.head { background: var(--bg); font-size: 11.5px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: var(--ink-soft); }
+
+  /* Filter bar */
+  .filter-bar { display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap; }
+  .filter-bar input, .filter-bar select {
+    font-family: Arial, Helvetica, sans-serif; font-size: 13.5px; padding: 9px 12px;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--bg-raised); color: var(--ink);
+  }
+  .filter-bar input { flex: 1; min-width: 220px; }
+  .result-count { font-size: 12.5px; color: var(--ink-soft); margin-top: 8px; }
+
+  /* Pages table */
+  .fx-table { margin-top: 12px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--bg-raised); }
+  .fx-row {
+    display: grid; grid-template-columns: 2fr 90px 90px 130px 110px 120px;
+    gap: 12px; padding: 13px 18px; border-bottom: 1px solid var(--line); align-items: center;
+  }
+  .fx-row:last-child { border-bottom: none; }
+  .fx-row.head { background: var(--bg); font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: var(--ink-soft); }
+  .fx-row .url-cell { font-size: 13.5px; overflow-wrap: anywhere; }
+  .fx-row .url-cell a { text-decoration: none; }
+  .fx-row .url-cell .type { display: block; font-size: 11px; color: var(--ink-soft); margin-top: 2px; }
+  .pill { display: inline-block; font-size: 11.5px; font-weight: 700; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+  .pill.good { background: var(--good-bg); color: var(--good-text); }
+  .pill.bad { background: var(--bad-bg); color: var(--bad-text); }
+  .pill.warn { background: var(--warn-bg); color: var(--warn-text); }
+
+  @media (max-width: 860px) {
+    .fx-row { grid-template-columns: 1fr; gap: 6px; }
+    .fx-row.head { display: none; }
+    .fx-row:not(.head) { padding: 16px 18px; }
+    .fx-row span.cell-label { display: inline-block; width: 108px; font-size: 11px; color: var(--ink-soft); }
+  }
+
+  footer { margin-top: 60px; padding-top: 22px; border-top: 3px solid var(--syn-green); font-size: 12.5px; color: var(--ink-soft); }
+  footer p { max-width: 640px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="top-row">
+      <div>
+        <a class="back" href="../">&larr; All tracked sites</a>
+        <div class="eyebrow">AIO Status &middot; Syngenta Turkiye</div>
+      </div>
+      <div class="meta">Last scan: 2026-09-28 17:15 UTC<br>Runs weekly, every Monday</div>
+    </div>
+    <h1 class="title">Current technical AIO state of www.syngenta.com.tr</h1>
+    <p class="deck">Automated, current-state-only diagnostics against the on-page checklist from the syngenta-seo-aeo-optimizer skill. No recommendations here, just what is true about the site right now.</p>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <div class="scorecard">
+    <div class="stat">
+      <div class="num">0</div>
+      <div class="label">Pages scanned</div>
+    </div>
+    <div class="stat">
+      <div class="num good">0.0%</div>
+      <div class="label">Pages with a JS content gap</div>
+    </div>
+    <div class="stat">
+      <div class="num bad">0.0%</div>
+      <div class="label">Pages with FAQPage schema</div>
+    </div>
+    <div class="stat">
+      <div class="num good">0.0%</div>
+      <div class="label">Pages missing a text H1</div>
+    </div>
+  </div>
+
+  
+
+  <section id="bots">
+    <h2 class="h-section">AI crawler access (robots.txt)</h2>
+    <div class="bot-table">
+      <div class="bot-row head"><div>Bot</div><div>Status</div></div>
+      
+      <div class="bot-row">
+        <div>GPTBot</div>
+        <div>
+          <span class="pill warn">Unknown</span>
+        </div>
+      </div>
+      
+      <div class="bot-row">
+        <div>Anthropic-AI</div>
+        <div>
+          <span class="pill warn">Unknown</span>
+        </div>
+      </div>
+      
+      <div class="bot-row">
+        <div>ClaudeBot</div>
+        <div>
+          <span class="pill warn">Unknown</span>
+        </div>
+      </div>
+      
+      <div class="bot-row">
+        <div>PerplexityBot</div>
+        <div>
+          <span class="pill warn">Unknown</span>
+        </div>
+      </div>
+      
+      <div class="bot-row">
+        <div>Google-Extended</div>
+        <div>
+          <span class="pill warn">Unknown</span>
+        </div>
+      </div>
+      
+      <div class="bot-row">
+        <div>CCBot</div>
+        <div>
+          <span class="pill warn">Unknown</span>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <section id="pages">
+    <div class="section-head">
+      <h2 class="h-section">Pages (0)</h2>
+      <span class="section-note">Flagged pages listed first</span>
+    </div>
+
+    <div class="filter-bar">
+      <input type="text" id="urlFilter" placeholder="Filter by URL or page type&hellip;">
+      <select id="issueFilter">
+        <option value="all">All pages</option>
+        <option value="flagged">Only pages with a flag</option>
+      </select>
+    </div>
+    <div class="result-count" id="resultCount"></div>
+
+    <div class="fx-table" id="pageTable">
+      <div class="fx-row head">
+        <div>URL</div><div>JS gap</div><div>H1</div><div>Meta desc.</div><div>FAQ schema</div><div>Alt text</div>
+      </div>
+      
+    </div>
+  </section>
+
+  <footer>
+    <p><strong>Methodology.</strong> Each page is fetched twice: once as raw HTML (no JavaScript, close to what most AI crawlers see) and once through a headless browser (close to what a person or Googlebot sees). The gap between the two is the "JS content gap" flag. Schema is read directly from each page's JSON-LD. H2 phrasing, freshness signals, and page-type grouping are simple text heuristics, not guarantees. This dashboard reports facts only: no recommendations are generated by this tool.</p>
+    <p>Generated automatically by a scheduled script, no AI model runs at scan time. Source: syngenta-seo-aeo-optimizer checklist.</p>
+  </footer>
+
+</main>
+
+<script>
+(function () {
+  var urlFilter = document.getElementById('urlFilter');
+  var issueFilter = document.getElementById('issueFilter');
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#pageTable .fx-row:not(.head)'));
+  var countEl = document.getElementById('resultCount');
+
+  function applyFilters() {
+    var q = (urlFilter.value || '').toLowerCase().trim();
+    var onlyFlagged = issueFilter.value === 'flagged';
+    var shown = 0;
+    rows.forEach(function (row) {
+      var matchesText = !q || row.dataset.url.indexOf(q) !== -1 || row.dataset.type.indexOf(q) !== -1;
+      var matchesFlag = !onlyFlagged || row.dataset.flagged === 'yes';
+      var visible = matchesText && matchesFlag;
+      row.style.display = visible ? '' : 'none';
+      if (visible) shown++;
+    });
+    countEl.textContent = shown + ' of ' + rows.length + ' pages shown';
+  }
+
+  urlFilter.addEventListener('input', applyFilters);
+  issueFilter.addEventListener('change', applyFilters);
+  applyFilters();
+})();
+</script>
+
+</body>
+</html>
