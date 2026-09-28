@@ -9,3 +9,8 @@ sites:
   domain: https://www.syngenta.com.tr
   sitemap_urls:
   - https://www.syngenta.com.tr/sitemap.xml
+- name: Syngenta Poland
+  slug: syngenta-pl
+  domain: https://www.syngenta.pl
+  sitemap_urls:
+  - https://www.syngenta.pl/sitemap.xml
