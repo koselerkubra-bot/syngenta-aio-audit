@@ -2,7 +2,7 @@
 # The site list itself (domain, sitemap) lives in that separate file so
 # adding a new site never means touching this one.
 
-user_agent: "AIOAuditBot/1.0 (+internal tool, contact: gdm-digital@syngenta.com)"
+user_agent: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 SyngentaAIOAudit/1.0 (+internal tool, contact: gdm-digital@syngenta.com)"
 
 request_timeout: 20        # seconds, for plain HTTP fetches
 render_timeout_ms: 15000   # milliseconds, for the headless-browser fetch
