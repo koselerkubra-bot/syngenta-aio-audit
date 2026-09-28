@@ -4,93 +4,132 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AIO Status: Tracked Sites</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #F6F7F2; --bg-raised: #FFFFFF; --ink: #1B241D; --ink-soft: #4A544C;
-    --line: #DCDFD3; --accent: #2F5233; --accent-soft: #E4EBDF;
-    --bad: #B23A1A; --bad-soft: #F7E4DC; --warn: #B5810F; --warn-soft: #F6EAD1;
-    --good: #3F7A48; --good-soft: #E1EFE1;
+    /* Syngenta brand palette */
+    --syn-green: #7FCA3F;
+    --syn-green-soft: #EAF7DC;
+    --syn-green-text: #3D6B1D;
+    --syn-cyan: #00CFCD;
+    --syn-cyan-soft: #DFF9F8;
+    --syn-yellow: #FFBA00;
+    --syn-yellow-soft: #FFF3D9;
+    --syn-pink: #FB4593;
+    --syn-pink-soft: #FDE3ED;
+    --syn-pink-text: #A61756;
+    --syn-blue: #00A0BE;
+    --syn-blue-soft: #DFF3F7;
+    --syn-blue-text: #00647A;
+    --syn-orange: #EB8200;
+    --syn-orange-soft: #FCE8D2;
+    --syn-orange-text: #9C5400;
+    --syn-purple: #AB2E78;
+    --syn-purple-soft: #F3E1EC;
+    --syn-dark-blue: #334C56;
+    --syn-logo-blue: #004896;
+
+    --bg: #F5F5F5;
+    --bg-raised: #FFFFFF;
+    --ink: #000000;
+    --ink-soft: #666666;
+    --ink-faint: #999999;
+    --line: #E0E0E0;
+
+    --good-bg: var(--syn-green-soft); --good-text: var(--syn-green-text);
+    --bad-bg: var(--syn-pink-soft); --bad-text: var(--syn-pink-text);
+    --warn-bg: var(--syn-orange-soft); --warn-text: var(--syn-orange-text);
+
     padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px);
   }
   :root:not([data-theme="light"]) {
     @media (prefers-color-scheme: dark) {
-      --bg: #14170F; --bg-raised: #1B2016; --ink: #ECEEE6; --ink-soft: #ABB4A4;
-      --line: #333A2B; --accent: #8FBF8A; --accent-soft: #232B1F;
-      --bad: #E6825F; --bad-soft: #2E1D16; --warn: #E0B655; --warn-soft: #2C2413;
-      --good: #86C48B; --good-soft: #1C2A1D;
+      --bg: #14171A; --bg-raised: #1E2226; --ink: #F2F2F2; --ink-soft: #ABABAB; --ink-faint: #7A7A7A;
+      --line: #33383D;
+      --good-bg: #1B2A12; --good-text: #9FE871;
+      --bad-bg: #2E1420; --bad-text: #FF9BC2;
+      --warn-bg: #2C1F0C; --warn-text: #FFB74D;
     }
   }
   :root[data-theme="dark"] {
-    --bg: #14170F; --bg-raised: #1B2016; --ink: #ECEEE6; --ink-soft: #ABB4A4;
-    --line: #333A2B; --accent: #8FBF8A; --accent-soft: #232B1F;
-    --bad: #E6825F; --bad-soft: #2E1D16; --warn: #E0B655; --warn-soft: #2C2413;
-    --good: #86C48B; --good-soft: #1C2A1D;
+    --bg: #14171A; --bg-raised: #1E2226; --ink: #F2F2F2; --ink-soft: #ABABAB; --ink-faint: #7A7A7A;
+    --line: #33383D;
+    --good-bg: #1B2A12; --good-text: #9FE871;
+    --bad-bg: #2E1420; --bad-text: #FF9BC2;
+    --warn-bg: #2C1F0C; --warn-text: #FFB74D;
   }
   * { box-sizing: border-box; }
-  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Inter", system-ui, sans-serif; font-size: 15.5px; line-height: 1.55; }
-  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; font-weight: 600; margin: 0; }
-  a { color: var(--accent); }
-  .wrap { max-width: 900px; margin: 0 auto; padding: 48px 28px 90px; }
-  .mark { font-family: "Fraunces", serif; font-size: 15px; }
-  .mark span { color: var(--accent); }
-  h1.title { font-size: 32px; margin-top: 18px; }
-  .deck { max-width: 620px; color: var(--ink-soft); margin-top: 12px; }
-  .meta { font-size: 12.5px; color: var(--ink-soft); margin-top: 20px; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: Arial, Helvetica, sans-serif; font-size: 15.5px; line-height: 1.55; }
+  h1, h2 { font-family: Arial, Helvetica, sans-serif; font-weight: 700; margin: 0; }
+  a { color: var(--syn-logo-blue); }
 
-  section { margin-top: 46px; }
-  h2.h-section { font-size: 21px; }
+  .hero { background: var(--syn-dark-blue); color: #FFFFFF; border-bottom: 4px solid var(--syn-green); }
+  .hero .wrap { padding: 34px 28px 34px; }
+  .hero .eyebrow { font-size: 11.5px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--syn-green); }
+  .hero h1.title { font-size: 30px; margin-top: 8px; color: #FFFFFF; }
+  .hero .deck { max-width: 640px; color: #C7D2D6; margin-top: 12px; }
+  .hero .meta { font-size: 12.5px; color: #C7D2D6; margin-top: 18px; }
+
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 28px; }
+  main.wrap { padding-top: 40px; padding-bottom: 90px; }
+
+  section { margin-top: 48px; }
+  h2.h-section { font-size: 20px; }
   .section-note { font-size: 13px; color: var(--ink-soft); margin-top: 8px; max-width: 620px; }
 
   /* Site cards */
-  .site-list { margin-top: 26px; display: grid; gap: 14px; }
+  .site-list { margin-top: 22px; display: grid; gap: 14px; }
   .site-card {
-    display: block; background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px;
-    padding: 20px 22px; transition: border-color 0.15s ease; text-decoration: none;
+    display: block; background: var(--bg-raised); border: 1px solid var(--line); border-radius: 10px;
+    padding: 20px 22px; transition: transform 0.12s ease; text-decoration: none;
+    border-top: 4px solid var(--card-accent, var(--syn-cyan));
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
   }
-  .site-card:hover { border-color: var(--accent); }
+  .site-card:hover { transform: translateY(-2px); }
   .site-card .row1 { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; }
-  .site-card h3 { font-size: 19px; color: var(--ink); }
+  .site-card h2 { font-size: 18px; color: var(--ink); }
   .site-card .domain { font-size: 12.5px; color: var(--ink-soft); }
   .site-card .stats { display: flex; gap: 22px; margin-top: 14px; flex-wrap: wrap; }
   .site-card .stat { font-size: 12.5px; color: var(--ink-soft); }
-  .site-card .stat b { display: block; font-family: "Fraunces", serif; font-size: 20px; color: var(--ink); font-weight: 600; }
-  .site-card .stat b.bad { color: var(--bad); }
+  .site-card .stat b { display: block; font-size: 19px; color: var(--ink); font-weight: 700; }
+  .site-card .stat b.bad { color: var(--bad-text); }
+  .site-card .stat b.good { color: var(--good-text); }
   .site-card .scanned { font-size: 11.5px; color: var(--ink-soft); margin-top: 12px; }
-  .empty { margin-top: 26px; padding: 26px; border: 1px dashed var(--line); border-radius: 12px; color: var(--ink-soft); font-size: 14px; }
+  .empty { margin-top: 22px; padding: 26px; border: 1px dashed var(--line); border-radius: 10px; color: var(--ink-soft); font-size: 14px; }
 
   /* Add-site panel */
-  .panel { background: var(--bg-raised); border: 1px solid var(--line); border-radius: 14px; padding: 24px 26px; margin-top: 22px; }
+  .panel {
+    background: var(--bg-raised); border: 1px solid var(--line); border-radius: 12px; padding: 24px 26px; margin-top: 20px;
+    border-top: 4px solid var(--syn-green); box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
   .field { margin-top: 16px; }
   .field:first-child { margin-top: 0; }
-  .field label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .field label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 6px; }
   .field .hint { font-size: 12px; color: var(--ink-soft); margin-top: 5px; }
   .field input {
-    width: 100%; font-family: "Inter", sans-serif; font-size: 14px; padding: 10px 12px;
+    width: 100%; font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding: 10px 12px;
     border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--ink);
   }
-  .field input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .field input:focus { outline: 2px solid var(--syn-blue); outline-offset: 1px; }
   .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   @media (max-width: 620px) { .row-2 { grid-template-columns: 1fr; } }
 
   button.primary {
-    margin-top: 18px; font-family: "Inter", sans-serif; font-size: 14px; font-weight: 600;
-    background: var(--accent); color: var(--bg-raised); border: none; border-radius: 8px;
+    margin-top: 18px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 700;
+    background: var(--syn-green); color: #0F1A08; border: none; border-radius: 8px;
     padding: 11px 18px; cursor: pointer;
   }
+  button.primary:hover { background: #71B838; }
   button.primary:disabled { opacity: 0.55; cursor: default; }
   button.link {
-    background: none; border: none; padding: 0; font-family: "Inter", sans-serif; font-size: 12.5px;
-    color: var(--accent); text-decoration: underline; cursor: pointer; margin-top: 10px;
+    background: none; border: none; padding: 0; font-family: Arial, Helvetica, sans-serif; font-size: 12.5px;
+    color: var(--syn-logo-blue); text-decoration: underline; cursor: pointer; margin-top: 10px;
   }
 
   .status { margin-top: 14px; font-size: 13.5px; padding: 10px 14px; border-radius: 8px; display: none; }
   .status.show { display: block; }
-  .status.loading { background: var(--accent-soft); color: var(--ink); }
-  .status.success { background: var(--good-soft); color: var(--good); }
-  .status.error { background: var(--bad-soft); color: var(--bad); }
+  .status.loading { background: var(--syn-blue-soft); color: var(--syn-blue-text); }
+  .status.success { background: var(--good-bg); color: var(--good-text); }
+  .status.error { background: var(--bad-bg); color: var(--bad-text); }
 
   .token-help { margin-top: 14px; font-size: 12.5px; color: var(--ink-soft); border-top: 1px dashed var(--line); padding-top: 14px; display: none; }
   .token-help.show { display: block; }
@@ -101,36 +140,42 @@
   .runs-table { margin-top: 16px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
   .runs-row { display: grid; grid-template-columns: 90px 1fr 140px 70px; gap: 10px; padding: 10px 14px; font-size: 13px; border-bottom: 1px solid var(--line); align-items: center; }
   .runs-row:last-child { border-bottom: none; }
-  .runs-row.head { background: var(--accent-soft); font-size: 11.5px; font-weight: 600; color: var(--ink-soft); }
-  .pill { display: inline-block; font-size: 11.5px; font-weight: 600; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
-  .pill.good { background: var(--good-soft); color: var(--good); }
-  .pill.bad { background: var(--bad-soft); color: var(--bad); }
-  .pill.warn { background: var(--warn-soft); color: var(--warn); }
+  .runs-row.head { background: var(--bg); font-size: 11px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; color: var(--ink-soft); }
+  .pill { display: inline-block; font-size: 11.5px; font-weight: 700; border-radius: 999px; padding: 3px 9px; white-space: nowrap; }
+  .pill.good { background: var(--good-bg); color: var(--good-text); }
+  .pill.bad { background: var(--bad-bg); color: var(--bad-text); }
+  .pill.warn { background: var(--warn-bg); color: var(--warn-text); }
   @media (max-width: 620px) { .runs-row { grid-template-columns: 1fr; gap: 4px; } .runs-row.head { display: none; } }
 
-  footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-soft); max-width: 640px; }
+  footer { margin-top: 50px; padding-top: 20px; border-top: 3px solid var(--syn-green); font-size: 12.5px; color: var(--ink-soft); max-width: 640px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <div class="mark">AIO Status <span>&middot; all tracked sites</span></div>
-  <h1 class="title">Technical AIO status across every tracked site</h1>
-  <p class="deck">One dashboard per site, all built from the same on-page checklist, updated on a weekly schedule. No AI model runs at scan time.</p>
-  <div class="meta">Last run: 2026-09-28 10:50 UTC</div>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">AIO Status &middot; all tracked sites</div>
+    <h1 class="title">Technical AIO status across every tracked site</h1>
+    <p class="deck">One dashboard per site, all built from the same on-page checklist, updated on a weekly schedule. No AI model runs at scan time.</p>
+    <div class="meta">Last run: 2026-09-28 12:06 UTC</div>
+  </div>
+</div>
+
+<main class="wrap">
 
   <section id="sites">
     <h2 class="h-section">Tracked sites</h2>
     
     <div class="site-list">
       
-      <a class="site-card" href="syngenta-ca/">
+      <a class="site-card" href="syngenta-ca/" style="--card-accent: var(--syn-cyan);">
         <div class="row1">
-          <h3>Syngenta Canada</h3>
+          <h2>Syngenta Canada</h2>
           <span class="domain">www.syngenta.ca</span>
         </div>
         <div class="stats">
           <div class="stat"><b>294</b>pages scanned</div>
-          <div class="stat"><b class="bad">96.3%</b>JS content gap</div>
+          <div class="stat"><b class="bad">96.6%</b>JS content gap</div>
           <div class="stat"><b class="bad">0.0%</b>FAQ schema present</div>
         </div>
         <div class="scanned">Last scanned 2026-09-28</div>
@@ -186,7 +231,8 @@
   <footer>
     <p>Each site's dashboard reports current-state facts only, no recommendations. Generated automatically by a scheduled script; adding a site or checking status from this page talks directly to GitHub's API from your browser, nothing else is involved.</p>
   </footer>
-</div>
+
+</main>
 
 <script>
 (function () {
