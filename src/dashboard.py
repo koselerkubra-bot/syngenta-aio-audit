@@ -89,18 +89,30 @@ def render_dashboard(
     Path(output_path).write_text(html, encoding="utf-8")
 
 
-def render_hub(template_dir: str, output_path: str, generated_at: str, sites: list[dict]) -> None:
+def render_hub(
+    template_dir: str,
+    output_path: str,
+    generated_at: str,
+    sites: list[dict],
+    github: dict | None = None,
+) -> None:
     """Render the top-level docs/index.html that lists every tracked site.
 
     Each entry in ``sites`` is expected to have: name, slug, domain,
     generated_at, and summary (the same summary dict a per-site
     dashboard uses), so the hub can show one headline stat per site.
+
+    ``github`` (owner, repo, workflow_file) powers the page's own
+    "Add a site" form: it lets the form call the GitHub Actions API
+    directly from the visitor's browser, with a token the visitor
+    supplies themselves, kept only in their own browser. No backend,
+    still fully independent of any AI model at run time.
     """
     env = Environment(
         loader=FileSystemLoader(template_dir),
         autoescape=select_autoescape(["html"]),
     )
     template = env.get_template("hub.html.j2")
-    html = template.render(generated_at=generated_at, sites=sites)
+    html = template.render(generated_at=generated_at, sites=sites, github=github or {})
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)
     Path(output_path).write_text(html, encoding="utf-8")
