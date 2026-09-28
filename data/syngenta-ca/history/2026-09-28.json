@@ -17,8 +17,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 8,
+      "total_images": 35,
+      "empty_alt": 12,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -32,7 +32,7 @@
     "url": "https://www.syngenta.ca/about-syngenta/syngenta-in-canada",
     "page_type": "other",
     "fetched_raw_ok": true,
-    "fetched_rendered_ok": true,
+    "fetched_rendered_ok": false,
     "meta_title": "Syngenta Canada | Syngenta in Canada",
     "meta_title_len": 36,
     "meta_description": "Information about Syngenta, its purpose and values and the Canadian business is available.",
@@ -48,16 +48,16 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 58,
-      "empty_alt": 8,
-      "filename_like_alt": 2,
+      "total_images": 35,
+      "empty_alt": 5,
+      "filename_like_alt": 1,
       "missing_or_broken_src": 0
     },
-    "freshness_signal_present": true,
+    "freshness_signal_present": false,
     "raw_word_count": 1162,
-    "rendered_word_count": 4234,
-    "js_content_gap_ratio": 3.64,
-    "js_content_gap_flag": true
+    "rendered_word_count": 0,
+    "js_content_gap_ratio": 0.0,
+    "js_content_gap_flag": false
   },
   {
     "url": "https://www.syngenta.ca/agrisure",
@@ -81,8 +81,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 38,
-      "empty_alt": 3,
+      "total_images": 42,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -114,8 +114,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 3,
+      "total_images": 37,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -147,8 +147,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 52,
-      "empty_alt": 7,
+      "total_images": 56,
+      "empty_alt": 11,
       "filename_like_alt": 6,
       "missing_or_broken_src": 0
     },
@@ -182,8 +182,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 26,
-      "empty_alt": 3,
+      "total_images": 30,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -213,8 +213,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -242,8 +242,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 39,
-      "empty_alt": 3,
+      "total_images": 43,
+      "empty_alt": 7,
       "filename_like_alt": 7,
       "missing_or_broken_src": 0
     },
@@ -279,8 +279,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 26,
-      "empty_alt": 3,
+      "total_images": 30,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -313,8 +313,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 284,
-      "empty_alt": 260,
+      "total_images": 288,
+      "empty_alt": 264,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -348,8 +348,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 3,
+      "total_images": 36,
+      "empty_alt": 7,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -377,8 +377,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 72,
-      "empty_alt": 47,
+      "total_images": 78,
+      "empty_alt": 53,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -408,8 +408,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 81,
-      "empty_alt": 54,
+      "total_images": 85,
+      "empty_alt": 58,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -437,8 +437,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 8,
+      "total_images": 35,
+      "empty_alt": 12,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -470,8 +470,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 38,
-      "empty_alt": 3,
+      "total_images": 42,
+      "empty_alt": 7,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -499,8 +499,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 38,
-      "empty_alt": 3,
+      "total_images": 42,
+      "empty_alt": 7,
       "filename_like_alt": 7,
       "missing_or_broken_src": 0
     },
@@ -534,8 +534,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 3,
+      "total_images": 36,
+      "empty_alt": 7,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -565,8 +565,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 81,
-      "empty_alt": 54,
+      "total_images": 85,
+      "empty_alt": 58,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -602,8 +602,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 3,
+      "total_images": 37,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -637,8 +637,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 3,
+      "total_images": 37,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -668,8 +668,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -699,8 +699,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 26,
-      "empty_alt": 3,
+      "total_images": 30,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -730,8 +730,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 3,
+      "total_images": 35,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -759,8 +759,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 4,
+      "total_images": 31,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -788,8 +788,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -820,8 +820,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -864,8 +864,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 26,
-      "empty_alt": 3,
+      "total_images": 30,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -909,8 +909,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 28,
-      "empty_alt": 5,
+      "total_images": 32,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -946,8 +946,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 26,
-      "empty_alt": 3,
+      "total_images": 30,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -991,8 +991,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 39,
-      "empty_alt": 16,
+      "total_images": 43,
+      "empty_alt": 20,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1025,8 +1025,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 3,
+      "total_images": 34,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1061,8 +1061,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1115,8 +1115,8 @@
     "schema_types_found": [],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 119,
-      "empty_alt": 34,
+      "total_images": 123,
+      "empty_alt": 38,
       "filename_like_alt": 21,
       "missing_or_broken_src": 0
     },
@@ -1149,8 +1149,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 3,
+      "total_images": 34,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1178,8 +1178,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 38,
-      "empty_alt": 3,
+      "total_images": 42,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1242,8 +1242,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 114,
-      "empty_alt": 54,
+      "total_images": 118,
+      "empty_alt": 58,
       "filename_like_alt": 10,
       "missing_or_broken_src": 0
     },
@@ -1275,8 +1275,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 102,
-      "empty_alt": 55,
+      "total_images": 106,
+      "empty_alt": 59,
       "filename_like_alt": 10,
       "missing_or_broken_src": 0
     },
@@ -1308,8 +1308,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 28,
-      "empty_alt": 3,
+      "total_images": 32,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1341,8 +1341,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 28,
-      "empty_alt": 3,
+      "total_images": 32,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1381,8 +1381,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 41,
-      "empty_alt": 5,
+      "total_images": 45,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -1415,8 +1415,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 3,
+      "total_images": 34,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1449,8 +1449,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 3,
+      "total_images": 34,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1483,8 +1483,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 4,
+      "total_images": 34,
+      "empty_alt": 8,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -1517,8 +1517,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 3,
+      "total_images": 35,
+      "empty_alt": 7,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -1551,8 +1551,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 3,
+      "total_images": 33,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1587,8 +1587,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -1621,8 +1621,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 3,
+      "total_images": 33,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1654,8 +1654,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 28,
-      "empty_alt": 3,
+      "total_images": 32,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1687,8 +1687,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 28,
-      "empty_alt": 3,
+      "total_images": 32,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1721,8 +1721,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 3,
+      "total_images": 35,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -1755,8 +1755,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 3,
+      "total_images": 34,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -1792,8 +1792,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 5,
+      "total_images": 35,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -1827,8 +1827,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 3,
+      "total_images": 33,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -1864,8 +1864,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 4,
+      "total_images": 35,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -1902,8 +1902,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 6,
+      "total_images": 36,
+      "empty_alt": 10,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -1940,8 +1940,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 5,
+      "total_images": 37,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -1976,8 +1976,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 4,
+      "total_images": 34,
+      "empty_alt": 8,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -2013,8 +2013,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 5,
+      "total_images": 35,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2050,8 +2050,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 5,
+      "total_images": 35,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2088,8 +2088,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 5,
+      "total_images": 36,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2126,8 +2126,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 4,
+      "total_images": 37,
+      "empty_alt": 8,
       "filename_like_alt": 5,
       "missing_or_broken_src": 0
     },
@@ -2164,8 +2164,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 5,
+      "total_images": 36,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2201,8 +2201,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 4,
+      "total_images": 35,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2237,8 +2237,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 3,
+      "total_images": 35,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2275,8 +2275,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 5,
+      "total_images": 36,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2312,8 +2312,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 4,
+      "total_images": 36,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2349,8 +2349,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 4,
+      "total_images": 35,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2385,8 +2385,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 4,
+      "total_images": 34,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2422,8 +2422,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 3,
+      "total_images": 36,
+      "empty_alt": 7,
       "filename_like_alt": 6,
       "missing_or_broken_src": 0
     },
@@ -2460,8 +2460,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 4,
+      "total_images": 37,
+      "empty_alt": 8,
       "filename_like_alt": 5,
       "missing_or_broken_src": 0
     },
@@ -2496,8 +2496,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 3,
+      "total_images": 34,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2535,8 +2535,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 5,
+      "total_images": 38,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2576,8 +2576,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -2618,8 +2618,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 9,
+      "total_images": 40,
+      "empty_alt": 13,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2659,8 +2659,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -2700,8 +2700,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -2729,8 +2729,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 10,
       "missing_or_broken_src": 0
     },
@@ -2758,8 +2758,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 10,
       "missing_or_broken_src": 0
     },
@@ -2796,8 +2796,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -2835,8 +2835,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 9,
+      "total_images": 39,
+      "empty_alt": 13,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -2873,8 +2873,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -2911,8 +2911,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -2940,8 +2940,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 10,
       "missing_or_broken_src": 0
     },
@@ -2969,8 +2969,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 10,
       "missing_or_broken_src": 0
     },
@@ -3008,8 +3008,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3047,8 +3047,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3083,8 +3083,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 8,
+      "total_images": 35,
+      "empty_alt": 12,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3112,8 +3112,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 10,
       "missing_or_broken_src": 0
     },
@@ -3150,8 +3150,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 8,
+      "total_images": 35,
+      "empty_alt": 12,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3188,8 +3188,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 8,
+      "total_images": 35,
+      "empty_alt": 12,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3226,8 +3226,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 4,
+      "total_images": 31,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3264,8 +3264,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 4,
+      "total_images": 31,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3303,8 +3303,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3342,8 +3342,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3383,8 +3383,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3423,8 +3423,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3463,8 +3463,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3504,8 +3504,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 9,
+      "total_images": 40,
+      "empty_alt": 13,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -3542,8 +3542,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 8,
+      "total_images": 35,
+      "empty_alt": 12,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3580,8 +3580,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3619,8 +3619,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3657,8 +3657,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3695,8 +3695,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3736,8 +3736,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 11,
+      "total_images": 38,
+      "empty_alt": 15,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3777,8 +3777,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 11,
+      "total_images": 38,
+      "empty_alt": 15,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3815,8 +3815,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3856,8 +3856,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3898,8 +3898,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 38,
-      "empty_alt": 9,
+      "total_images": 42,
+      "empty_alt": 13,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -3937,8 +3937,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 28,
-      "empty_alt": 5,
+      "total_images": 32,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -3976,8 +3976,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4014,8 +4014,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4053,8 +4053,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 8,
+      "total_images": 35,
+      "empty_alt": 12,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4089,8 +4089,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 4,
+      "total_images": 31,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4125,8 +4125,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 4,
+      "total_images": 31,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4161,8 +4161,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4198,8 +4198,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 7,
+      "total_images": 36,
+      "empty_alt": 11,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -4235,8 +4235,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 4,
+      "total_images": 31,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4272,8 +4272,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 4,
+      "total_images": 31,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4310,8 +4310,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4348,8 +4348,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4387,8 +4387,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4427,8 +4427,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 10,
+      "total_images": 37,
+      "empty_alt": 14,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4462,8 +4462,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4498,8 +4498,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 6,
+      "total_images": 34,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4536,8 +4536,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 8,
+      "total_images": 35,
+      "empty_alt": 12,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4574,8 +4574,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 8,
+      "total_images": 35,
+      "empty_alt": 12,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4612,8 +4612,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4651,8 +4651,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 6,
+      "total_images": 37,
+      "empty_alt": 10,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -4687,8 +4687,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 9,
+      "total_images": 36,
+      "empty_alt": 13,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4726,8 +4726,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4765,8 +4765,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4804,8 +4804,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4840,8 +4840,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 28,
-      "empty_alt": 5,
+      "total_images": 32,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4876,8 +4876,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 28,
-      "empty_alt": 5,
+      "total_images": 32,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4915,8 +4915,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 28,
-      "empty_alt": 5,
+      "total_images": 32,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4954,8 +4954,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -4993,8 +4993,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5031,8 +5031,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5069,8 +5069,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5108,8 +5108,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5146,8 +5146,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 29,
-      "empty_alt": 6,
+      "total_images": 33,
+      "empty_alt": 10,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5183,8 +5183,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 8,
+      "total_images": 35,
+      "empty_alt": 12,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5221,8 +5221,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 8,
+      "total_images": 39,
+      "empty_alt": 12,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -5258,8 +5258,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5296,8 +5296,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 7,
+      "total_images": 37,
+      "empty_alt": 11,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -5325,8 +5325,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 26,
-      "empty_alt": 3,
+      "total_images": 30,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5363,8 +5363,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5400,8 +5400,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 7,
+      "total_images": 34,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5438,8 +5438,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 7,
+      "total_images": 35,
+      "empty_alt": 11,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5478,8 +5478,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 11,
+      "total_images": 38,
+      "empty_alt": 15,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -5507,8 +5507,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 3,
+      "total_images": 40,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -5544,8 +5544,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 3,
+      "total_images": 40,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 1
     },
@@ -5580,8 +5580,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -5639,8 +5639,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 4,
+      "total_images": 36,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -5677,8 +5677,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 37,
-      "empty_alt": 4,
+      "total_images": 41,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -5713,8 +5713,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 4,
+      "total_images": 40,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -5749,8 +5749,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -5786,8 +5786,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 4,
+      "total_images": 36,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -5825,8 +5825,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 3,
+      "total_images": 40,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 1
     },
@@ -5861,8 +5861,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 4,
+      "total_images": 36,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -5897,8 +5897,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 4,
+      "total_images": 35,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -5933,8 +5933,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6012,8 +6012,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 4,
+      "total_images": 40,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 1
     },
@@ -6049,8 +6049,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6086,8 +6086,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 5,
+      "total_images": 38,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6123,8 +6123,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6160,8 +6160,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6189,8 +6189,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -6226,8 +6226,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 3,
+      "total_images": 39,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 1
     },
@@ -6263,8 +6263,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 5,
+      "total_images": 39,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6300,8 +6300,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 5,
+      "total_images": 40,
+      "empty_alt": 9,
       "filename_like_alt": 3,
       "missing_or_broken_src": 2
     },
@@ -6337,8 +6337,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6376,8 +6376,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -6414,8 +6414,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 38,
-      "empty_alt": 4,
+      "total_images": 42,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6450,8 +6450,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6486,8 +6486,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 5,
       "missing_or_broken_src": 2
     },
@@ -6523,8 +6523,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6559,8 +6559,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
@@ -6596,8 +6596,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6632,8 +6632,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 3,
       "missing_or_broken_src": 1
     },
@@ -6668,8 +6668,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -6704,8 +6704,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -6733,8 +6733,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -6762,8 +6762,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -6799,8 +6799,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 3,
+      "total_images": 39,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -6837,8 +6837,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 3,
       "missing_or_broken_src": 2
     },
@@ -6873,8 +6873,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 1
     },
@@ -6909,8 +6909,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
@@ -6945,8 +6945,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -6981,8 +6981,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
@@ -7018,8 +7018,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -7055,8 +7055,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -7090,8 +7090,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 4,
+      "total_images": 40,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 1
     },
@@ -7127,8 +7127,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 3,
+      "total_images": 39,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -7156,8 +7156,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -7193,8 +7193,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -7231,8 +7231,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 3,
+      "total_images": 37,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -7269,8 +7269,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 3,
+      "total_images": 39,
+      "empty_alt": 7,
       "filename_like_alt": 3,
       "missing_or_broken_src": 1
     },
@@ -7304,8 +7304,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -7339,8 +7339,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 5,
+      "total_images": 38,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -7376,8 +7376,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 3,
+      "total_images": 39,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -7412,8 +7412,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -7447,8 +7447,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 4,
+      "total_images": 35,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 1
     },
@@ -7485,8 +7485,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 37,
-      "empty_alt": 3,
+      "total_images": 41,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -7521,8 +7521,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 4,
+      "total_images": 35,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -7558,8 +7558,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 3,
+      "total_images": 39,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -7594,8 +7594,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -7631,8 +7631,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -7668,8 +7668,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 3,
       "missing_or_broken_src": 2
     },
@@ -7704,8 +7704,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -7740,8 +7740,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -7769,8 +7769,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -7806,8 +7806,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
@@ -7842,8 +7842,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -7871,8 +7871,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -7907,8 +7907,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 5,
+      "total_images": 35,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 3
     },
@@ -7943,8 +7943,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 5,
+      "total_images": 35,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 3
     },
@@ -7981,8 +7981,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 3,
+      "total_images": 39,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -8019,8 +8019,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 4,
+      "total_images": 36,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -8054,8 +8054,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 3,
+      "total_images": 40,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -8092,8 +8092,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 37,
-      "empty_alt": 4,
+      "total_images": 41,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -8128,8 +8128,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 37,
-      "empty_alt": 4,
+      "total_images": 41,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -8166,8 +8166,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 3,
+      "total_images": 39,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -8204,8 +8204,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 3,
       "missing_or_broken_src": 0
     },
@@ -8243,8 +8243,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 38,
-      "empty_alt": 4,
+      "total_images": 42,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -8280,8 +8280,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 3,
+      "total_images": 40,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -8317,8 +8317,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -8354,8 +8354,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 39,
-      "empty_alt": 4,
+      "total_images": 43,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -8391,8 +8391,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 4,
+      "total_images": 40,
+      "empty_alt": 8,
       "filename_like_alt": 3,
       "missing_or_broken_src": 2
     },
@@ -8427,8 +8427,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 37,
-      "empty_alt": 4,
+      "total_images": 41,
+      "empty_alt": 8,
       "filename_like_alt": 5,
       "missing_or_broken_src": 2
     },
@@ -8463,8 +8463,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
@@ -8500,8 +8500,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -8559,8 +8559,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 4,
+      "total_images": 35,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -8595,8 +8595,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 37,
-      "empty_alt": 4,
+      "total_images": 41,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -8633,8 +8633,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -8669,8 +8669,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
@@ -8705,8 +8705,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 38,
-      "empty_alt": 4,
+      "total_images": 42,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -8740,8 +8740,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 1
     },
@@ -8776,8 +8776,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
@@ -8814,8 +8814,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -8850,8 +8850,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 5,
+      "total_images": 35,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 3
     },
@@ -8887,8 +8887,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 32,
-      "empty_alt": 5,
+      "total_images": 36,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
@@ -8901,7 +8901,7 @@
   {
     "url": "https://www.syngenta.ca/productsdetail/revus-seed-treatment",
     "page_type": "product",
-    "fetched_raw_ok": true,
+    "fetched_raw_ok": false,
     "fetched_rendered_ok": true,
     "meta_title": "Revus® - Seed Treatment | Syngenta CA",
     "meta_title_len": 37,
@@ -8923,15 +8923,15 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 5,
+      "total_images": 39,
+      "empty_alt": 9,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
     "freshness_signal_present": true,
-    "raw_word_count": 333,
+    "raw_word_count": 0,
     "rendered_word_count": 4243,
-    "js_content_gap_ratio": 12.74,
+    "js_content_gap_ratio": Infinity,
     "js_content_gap_flag": true
   },
   {
@@ -8960,8 +8960,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 4,
+      "total_images": 37,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -8996,8 +8996,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 4,
+      "total_images": 35,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -9032,8 +9032,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 5,
+      "total_images": 35,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 3
     },
@@ -9068,8 +9068,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -9105,8 +9105,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 3,
+      "total_images": 35,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 0
     },
@@ -9141,8 +9141,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -9177,8 +9177,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 3,
       "missing_or_broken_src": 2
     },
@@ -9213,8 +9213,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 4,
+      "total_images": 37,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
@@ -9250,8 +9250,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 2
     },
@@ -9286,8 +9286,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -9324,8 +9324,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 3,
+      "total_images": 39,
+      "empty_alt": 7,
       "filename_like_alt": 4,
       "missing_or_broken_src": 1
     },
@@ -9362,8 +9362,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -9399,8 +9399,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 5,
       "missing_or_broken_src": 2
     },
@@ -9435,8 +9435,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 5,
+      "total_images": 39,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -9471,8 +9471,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 37,
-      "empty_alt": 4,
+      "total_images": 41,
+      "empty_alt": 8,
       "filename_like_alt": 5,
       "missing_or_broken_src": 2
     },
@@ -9508,8 +9508,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 3,
       "missing_or_broken_src": 2
     },
@@ -9546,8 +9546,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 4,
       "missing_or_broken_src": 1
     },
@@ -9582,8 +9582,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 5,
+      "total_images": 35,
+      "empty_alt": 9,
       "filename_like_alt": 2,
       "missing_or_broken_src": 3
     },
@@ -9619,8 +9619,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -9656,8 +9656,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -9692,8 +9692,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 4,
+      "total_images": 38,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -9730,8 +9730,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 33,
-      "empty_alt": 4,
+      "total_images": 37,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -9766,8 +9766,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 4,
+      "total_images": 40,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -9801,8 +9801,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 2
     },
@@ -9840,8 +9840,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 3,
+      "total_images": 40,
+      "empty_alt": 7,
       "filename_like_alt": 3,
       "missing_or_broken_src": 1
     },
@@ -9869,8 +9869,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -9907,8 +9907,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 37,
-      "empty_alt": 4,
+      "total_images": 41,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -9944,8 +9944,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -9980,8 +9980,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 4,
+      "total_images": 35,
+      "empty_alt": 8,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -10016,8 +10016,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 42,
-      "empty_alt": 14,
+      "total_images": 46,
+      "empty_alt": 18,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -10053,8 +10053,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 35,
-      "empty_alt": 4,
+      "total_images": 39,
+      "empty_alt": 8,
       "filename_like_alt": 5,
       "missing_or_broken_src": 2
     },
@@ -10082,8 +10082,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10111,8 +10111,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10140,8 +10140,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10169,8 +10169,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 36,
-      "empty_alt": 3,
+      "total_images": 40,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 1
     },
@@ -10198,8 +10198,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10227,8 +10227,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10258,8 +10258,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 26,
-      "empty_alt": 3,
+      "total_images": 30,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10292,8 +10292,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 30,
-      "empty_alt": 3,
+      "total_images": 34,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10324,8 +10324,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 26,
-      "empty_alt": 3,
+      "total_images": 30,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10355,8 +10355,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10390,8 +10390,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 31,
-      "empty_alt": 3,
+      "total_images": 35,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10422,8 +10422,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 26,
-      "empty_alt": 3,
+      "total_images": 30,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10451,8 +10451,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10480,8 +10480,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 27,
-      "empty_alt": 3,
+      "total_images": 31,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
@@ -10515,8 +10515,8 @@
     ],
     "has_faqpage_schema": false,
     "alt_text": {
-      "total_images": 34,
-      "empty_alt": 3,
+      "total_images": 38,
+      "empty_alt": 7,
       "filename_like_alt": 2,
       "missing_or_broken_src": 0
     },
