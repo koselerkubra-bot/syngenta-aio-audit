@@ -73,6 +73,33 @@ class RenderedFetcher:
         finally:
             context.close()
 
+    def fetch_text(self, url: str) -> Optional[str]:
+        """Fetch a URL's raw response body through the real browser engine,
+        not a plain HTTP client. Some sites' bot protection blocks
+        ``requests`` (and even a browser-like User-Agent on a plain HTTP
+        client) because the underlying network/TLS fingerprint gives it
+        away as non-browser traffic; a real headless Chromium navigation
+        is a much closer match to an actual visitor. Used as a fallback
+        for fetching sitemap.xml / robots.txt when the plain fetch is
+        blocked (HTTP 403 and similar).
+        """
+        if self._browser is None:
+            raise RuntimeError("Use RenderedFetcher as a context manager: 'with RenderedFetcher(...) as r:'")
+        context = self._browser.new_context(user_agent=self._user_agent)
+        page = context.new_page()
+        try:
+            response = page.goto(url, timeout=self._timeout_ms, wait_until="domcontentloaded")
+            if response is None or not response.ok:
+                status = response.status if response is not None else "no response"
+                logger.warning("Browser-based text fetch got a bad response for %s: %s", url, status)
+                return None
+            return response.text()
+        except Exception as exc:  # noqa: BLE001
+            logger.warning("Browser-based text fetch failed for %s: %s", url, exc)
+            return None
+        finally:
+            context.close()
+
 
 def polite_delay(seconds: float) -> None:
     """A small pause between page fetches. Keeps the weekly scan a good
