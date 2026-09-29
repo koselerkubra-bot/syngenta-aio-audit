@@ -62,22 +62,23 @@ def scan_site(site: dict, cfg: dict, limit: Optional[int] = None, delay_seconds:
     domain = site["domain"]
     paths = _resolve_paths(cfg, slug)
 
-    logger.info("[%s] Discovering pages via sitemap for %s", slug, domain)
-    urls = discover_urls(
-        domain=domain,
-        seed_sitemaps=site.get("sitemap_urls", []),
-        timeout=cfg["request_timeout"],
-        user_agent=cfg["user_agent"],
-        exclude_patterns=cfg.get("exclude_patterns", []),
-    )
-    if cfg.get("max_pages"):
-        urls = urls[: cfg["max_pages"]]
-    if limit:
-        urls = urls[:limit]
-    logger.info("[%s] Scanning %d page(s).", slug, len(urls))
-
-    pages: list[dict] = []
     with RenderedFetcher(cfg["user_agent"], cfg["render_timeout_ms"]) as renderer:
+        logger.info("[%s] Discovering pages via sitemap for %s", slug, domain)
+        urls = discover_urls(
+            domain=domain,
+            seed_sitemaps=site.get("sitemap_urls", []),
+            timeout=cfg["request_timeout"],
+            user_agent=cfg["user_agent"],
+            exclude_patterns=cfg.get("exclude_patterns", []),
+            browser_fetch=renderer.fetch_text,
+        )
+        if cfg.get("max_pages"):
+            urls = urls[: cfg["max_pages"]]
+        if limit:
+            urls = urls[:limit]
+        logger.info("[%s] Scanning %d page(s).", slug, len(urls))
+
+        pages: list[dict] = []
         for i, url in enumerate(urls, start=1):
             logger.info("[%s] [%d/%d] %s", slug, i, len(urls), url)
             raw_html = fetch_raw(url, cfg["request_timeout"], cfg["user_agent"])
@@ -92,18 +93,19 @@ def scan_site(site: dict, cfg: dict, limit: Optional[int] = None, delay_seconds:
             pages.append(analysis.to_dict())
             polite_delay(delay_seconds)
 
-    summary = build_summary(
-        pages,
-        meta_title_max_len=cfg["meta_title_max_len"],
-        meta_desc_min_len=cfg["meta_desc_min_len"],
-        meta_desc_max_len=cfg["meta_desc_max_len"],
-    )
-    summary["ai_bot_access"] = check_ai_bot_access(
-        domain=domain,
-        bots=cfg.get("ai_bots_to_check", []),
-        timeout=cfg["request_timeout"],
-        user_agent=cfg["user_agent"],
-    )
+        summary = build_summary(
+            pages,
+            meta_title_max_len=cfg["meta_title_max_len"],
+            meta_desc_min_len=cfg["meta_desc_min_len"],
+            meta_desc_max_len=cfg["meta_desc_max_len"],
+        )
+        summary["ai_bot_access"] = check_ai_bot_access(
+            domain=domain,
+            bots=cfg.get("ai_bots_to_check", []),
+            timeout=cfg["request_timeout"],
+            user_agent=cfg["user_agent"],
+            browser_fetch=renderer.fetch_text,
+        )
 
     save_latest_pages(paths["latest_pages_file"], pages)
     save_history_snapshot(paths["history_dir"], pages)
