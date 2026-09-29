@@ -14,3 +14,8 @@ sites:
   domain: https://www.syngenta.pl
   sitemap_urls:
   - https://www.syngenta.pl/sitemap.xml
+- name: Syngenta US
+  slug: syngenta-us-com
+  domain: https://www.syngenta-us.com
+  sitemap_urls:
+  - https://www.syngenta-us.com/sitemap.xml
