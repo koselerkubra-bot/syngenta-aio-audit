@@ -57,5 +57,64 @@
         "CCBot": "unknown"
       }
     }
+  },
+  {
+    "date": "2026-09-29",
+    "total_pages": 0,
+    "pages_by_type": {},
+    "js_content_gap": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "missing_h1": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "multiple_h1": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "meta_title_missing": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "meta_title_too_long": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "meta_description_missing": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "meta_description_out_of_range": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "faqpage_schema_present": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "any_schema_present": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "avg_h2_question_phrasing_pct": null,
+    "freshness_signal_present": {
+      "count": 0,
+      "pct": 0.0
+    },
+    "image_alt_totals": {},
+    "ai_bot_access": {
+      "robots_txt_url": "https://www.syngenta.com.tr/robots.txt",
+      "reachable": false,
+      "bots": {
+        "GPTBot": "unknown",
+        "Anthropic-AI": "unknown",
+        "ClaudeBot": "unknown",
+        "PerplexityBot": "unknown",
+        "Google-Extended": "unknown",
+        "CCBot": "unknown"
+      }
+    }
   }
 ]
