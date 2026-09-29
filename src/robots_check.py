@@ -49,25 +49,43 @@ def _parse_robots(text: str) -> dict[str, list[str]]:
     return groups
 
 
-def check_ai_bot_access(domain: str, bots: list[str], timeout: int, user_agent: str) -> dict:
+def check_ai_bot_access(
+    domain: str,
+    bots: list[str],
+    timeout: int,
+    user_agent: str,
+    browser_fetch=None,
+) -> dict:
     """For each bot in ``bots``, report whether robots.txt disallows it
     entirely (``Disallow: /`` in its own group, or in the wildcard ``*``
     group if the bot has no group of its own).
+
+    ``browser_fetch``, when given (see ``RenderedFetcher.fetch_text`` in
+    fetcher.py), is tried automatically if the plain HTTP fetch of
+    robots.txt is blocked.
     """
     robots_url = urljoin(domain, "/robots.txt")
     result: dict = {"robots_txt_url": robots_url, "reachable": False, "bots": {}}
 
+    text = None
     try:
         resp = requests.get(robots_url, timeout=timeout, headers={"User-Agent": user_agent})
         resp.raise_for_status()
+        text = resp.text
     except Exception as exc:  # noqa: BLE001
-        logger.warning("Could not fetch robots.txt at %s: %s", robots_url, exc)
+        logger.warning("Plain fetch of robots.txt at %s failed (%s).", robots_url, exc)
+
+    if text is None and browser_fetch is not None:
+        logger.info("Retrying %s through the headless browser.", robots_url)
+        text = browser_fetch(robots_url)
+
+    if text is None:
         for bot in bots:
             result["bots"][bot] = "unknown"
         return result
 
     result["reachable"] = True
-    groups = _parse_robots(resp.text)
+    groups = _parse_robots(text)
     wildcard_disallows = groups.get("*", [])
 
     for bot in bots:
